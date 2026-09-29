@@ -7,3 +7,5 @@
 /* Legibilidade para consultas prolongadas. */
 .proc-name{font-size:12px;color:#4e6355}.description{font-size:12px;color:#66765c}.datum strong{font-size:12px;color:#526746}.datum span,.section-label{color:#7b8a6e}.detail-note{color:#839275}.detail-breadcrumb{color:#829674}.field select{font-size:11px}.field label{font-size:11px}.group-button{font-size:11px}.group-count{color:#758d7b}.results-bar #result-context{color:#82957f}.value-card span{color:#7c9168}.relation-item p{font-size:11px;color:#607951}.relation-item small{color:#7f9270}
 @media(max-width:640px){.field select{font-size:10px}.field label{font-size:10px}.proc-name{font-size:12px}}
+
+.relation-filters{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.relation-filters input{width:100%;min-width:0;height:39px;border:1px solid var(--line);border-radius:6px;background:white;padding:0 10px;color:var(--ink);font-size:12px}.filter-help{font-size:11px;color:#66765c;margin-top:9px;line-height:1.6}@media(max-width:640px){.relation-filters{grid-template-columns:1fr;gap:12px}.relation-filters .field:first-child{grid-column:auto}}

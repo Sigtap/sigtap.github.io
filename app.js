@@ -10,6 +10,7 @@ const types={INSTRUMENTO:'Instrumentos de registro',MODALIDADE:'Modalidades',ATR
 const shortGroups={'01':'Promoção e prevenção','02':'Diagnóstico','03':'Procedimentos clínicos','04':'Procedimentos cirúrgicos','05':'Transplantes','06':'Medicamentos','07':'Órteses, próteses e materiais','08':'Ações complementares','09':'Cuidados integrados'};
 const complexity={'0':'Não se aplica','1':'Atenção básica','2':'Média complexidade','3':'Alta complexidade'};
 const sex={'A':'Ambos','I':'Ambos','M':'Masculino','F':'Feminino','N':'Não se aplica'};
+let relationIndex;
 let db,all=[],filtered=[],page=0,selected=null,current=null,detailTicket=0,tab='overview',relationTerm='';
 const PAGE_SIZE=50,groupsCache=new Map();let catalogPromise;
 async function fetchJSON(path){const r=await fetch(path);if(!r.ok)throw new Error('Não foi possível carregar a base.');return r.json()}
@@ -19,19 +20,33 @@ function toast(msg){$('#toast').textContent=msg;$('#toast').classList.add('show'
 function options(el,items,placeholder){el.innerHTML=`<option value="">${placeholder}</option>`+items.map(([k,v])=>`<option value="${esc(k)}">${esc(k)} — ${esc(v)}</option>`).join('')}
 function updateSubgroups(){const g=$('#group').value;options($('#subgroup'),g?db.hierarchy.subgroups[g]:[],g?'Todos os subgrupos':'Selecione um grupo');$('#subgroup').disabled=!g;updateForms()}
 function updateForms(){const s=$('#subgroup').value;options($('#form'),s?db.hierarchy.forms[s]:[],s?'Todas as formas':'Selecione um subgrupo');$('#form').disabled=!s}
-function syncURL(){const p=new URLSearchParams();if($('#search').value)p.set('q',$('#search').value);for(const [id,key] of [['group','g'],['subgroup','s'],['form','f']])if($('#'+id).value)p.set(key,$('#'+id).value);if(selected)p.set('p',selected);const value=p.toString();history.replaceState(null,'',location.pathname+(value?'?'+value:''))}
+function syncURL(){const p=new URLSearchParams();if($('#search').value)p.set('q',$('#search').value);for(const [id,key] of [['group','g'],['subgroup','s'],['form','f'],['cid','cid'],['cbo','cbo']])if($('#'+id).value)p.set(key,$('#'+id).value);if(selected)p.set('p',selected);const value=p.toString();history.replaceState(null,'',location.pathname+(value?'?'+value:''))}
+const relationCode=s=>norm(s).replace(/[^a-z0-9]/g,'');
+function relationMatches(kind, value){
+ const q=norm(value.trim());if(!q)return null;
+ const entries=relationIndex[kind],code=relationCode(q.split(' — ')[0]);
+ const exact=entries.filter(e=>relationCode(e[0])===code);
+ const matches=exact.length?exact:entries.filter(e=>relationCode(e[0]).startsWith(relationCode(q))||q.split(/\s+/).every(t=>norm(e[1]).includes(t)));
+ return new Set(matches.flatMap(e=>e[2]));
+}
+function relationSuggestions(kind){
+ const id=kind.toLowerCase(),q=norm($('#'+id).value.trim()),code=relationCode(q);
+ const entries=relationIndex[kind].filter(e=>!q||relationCode(e[0]).startsWith(code)||q.split(/\s+/).every(t=>norm(e[1]).includes(t)));
+ $('#'+id+'-options').innerHTML=entries.slice(0,60).map(e=>`<option value="${esc(e[0])} — ${esc(e[1])}"></option>`).join('');
+}
 function filter({preferred=null,mobile=false}={}){
  const q=norm($('#search').value.trim()),prefix=$('#form').value||$('#subgroup').value||$('#group').value;
  const digits=q.replace(/[.\-\s]/g,'');const isCode=/^\d+$/.test(digits);
- filtered=all.filter(p=>p[0].startsWith(prefix)&&(!q||(isCode?p[0].includes(digits):q.split(/\s+/).every(t=>p[2].includes(t)))));
+ const cid=relationMatches('CID',$('#cid').value),cbo=relationMatches('CBO',$('#cbo').value);
+ filtered=all.filter(p=>(!cid||cid.has(p[0]))&&(!cbo||cbo.has(p[0]))&&p[0].startsWith(prefix)&&(!q||(isCode?p[0].includes(digits):q.split(/\s+/).every(t=>p[2].includes(t)))));
  page=0;
  const keep=preferred||selected;
  selected=filtered.some(p=>p[0]===keep)?keep:(filtered[0]?.[0]||null);
  if(preferred&&selected===preferred)page=Math.floor(filtered.findIndex(p=>p[0]===preferred)/PAGE_SIZE);
  $('#result-count').textContent=`${fmt(filtered.length)} ${filtered.length===1?'procedimento encontrado':'procedimentos encontrados'}`;
- $('#result-context').textContent=q||prefix?' com os filtros atuais':' na base completa';
+ $('#result-context').textContent=q||prefix||cid||cbo?' com os filtros atuais':' na base completa';
  document.querySelectorAll('.group-button').forEach(b=>{const active=b.dataset.group===$('#group').value;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active)});
- $('#all-groups').classList.toggle('active',!prefix&&!q);
+ $('#all-groups').classList.toggle('active',!prefix&&!q&&!cid&&!cbo);
  if(!mobile)$('#workspace').classList.remove('mobile-detail');
  renderList();
  if(selected)loadDetail(selected,{mobile});else{current=null;++detailTicket;$('#detail').innerHTML=`<div class="empty-detail">${icon('search')}<h2>Nenhum procedimento encontrado.</h2><p>Experimente outro termo ou limpe os filtros para consultar toda a base.</p></div>`}
@@ -73,7 +88,7 @@ function renderOverview(){const p=current.p;
  const docs=(p.relations.ATRIBUTO_COMPLEMENTAR||[]).map(i=>current.cat[i]).filter(x=>['009','034','058'].includes(x[0])).map(x=>x[1]);
  const rawAge=x=>x==null?'Não informado':x===9999?'9999 (código da base)':fmt(x)+' meses';
  const max=p.quantidade_maxima===9999?'9999 (código da base)':p.quantidade_maxima==null?'Não informado':fmt(p.quantidade_maxima);
- $('#detail-body').innerHTML=`<div class="section-label">DESCRIÇÃO DO PROCEDIMENTO</div><p class="description ${p.descricao?'':'missing'}">${esc(p.descricao||'Descrição não disponível nesta base.')}</p><div class="detail-grid">${datum('Financiamento',[p.financiamento_codigo,p.financiamento_nome].filter(Boolean).join(' — '))}${datum('Instrumentos de registro',names('INSTRUMENTO').join(' · ')||'Sem registro na base')}${datum('Sexo',sex[p.sexo]||p.sexo)}${datum('Quantidade máxima',max)}${datum('Idade mínima / máxima',rawAge(p.idade_minima)+' / '+rawAge(p.idade_maxima),'Valores preservados da base SIGTAP')}${datum('Identificação do usuário',docs.join(' · ')||'Sem atributo de CPF/CNS informado','Conforme atributos complementares')}</div><div class="values"><div class="value-card"><span>AMBULATORIAL · SA</span><strong>${currency(p.valor_sa)}</strong></div><div class="value-card"><span>HOSPITALAR · SH</span><strong>${currency(p.valor_sh)}</strong></div><div class="value-card"><span>PROFISSIONAL · SP</span><strong>${currency(p.valor_sp)}</strong></div></div><p class="detail-note">Competência 08/2026 · Valores de referência presentes na base do projeto. Consulte os relacionamentos para os atributos e condicionantes.</p>`
+ $('#detail-body').innerHTML=`<div class="section-label">DESCRIÇÃO DO PROCEDIMENTO</div><p class="description ${p.descricao?'':'missing'}">${esc(p.descricao||'Descrição não disponível nesta base.')}</p><div class="detail-grid">${datum('Financiamento',[p.financiamento_codigo,p.financiamento_nome].filter(Boolean).join(' — '))}${datum('Instrumentos de registro',names('INSTRUMENTO').join(' · ')||'Sem registro na base')}${datum('Sexo',sex[p.sexo]||p.sexo)}${datum('Quantidade máxima',max)}${datum('Idade mínima / máxima',rawAge(p.idade_minima)+' / '+rawAge(p.idade_maxima),'Valores preservados da base SIGTAP')}${datum('Identificação do usuário',docs.join(' · ')||'Sem atributo de CPF/CNS informado','Conforme atributos complementares')}</div><div class="values"><div class="value-card"><span>AMBULATORIAL · SA</span><strong>${currency(p.valor_sa)}</strong></div><div class="value-card"><span>HOSPITALAR · SH</span><strong>${currency(p.valor_sh)}</strong></div><div class="value-card"><span>PROFISSIONAL · SP</span><strong>${currency(p.valor_sp)}</strong></div></div><p class="detail-note">Competência ${edition()} · Valores de referência presentes na base do projeto. Consulte os relacionamentos para os atributos e condicionantes.</p>`
 }
 function renderRelations(){
  $('#detail-body').innerHTML=`<input class="relation-search" id="relation-search" type="search" aria-label="Filtrar relacionamentos" placeholder="Filtrar por CBO, CID, código ou descrição…" value="${esc(relationTerm)}"><div id="relation-groups"></div><p class="detail-note">Ausência de registros não confirma dispensa de requisito. Os vínculos abaixo reproduzem a consulta do MVP nesta competência.</p>`;
@@ -84,15 +99,17 @@ function renderRelationGroups(){const q=norm(relationTerm),{p,cat}=current;let s
  $('#relation-groups').innerHTML=Object.entries(types).map(([kind,name])=>{let ids=p.relations[kind]||[];if(q)ids=ids.filter(i=>norm([name,...cat[i]].join(' ')).includes(q));if(q&&!ids.length)return '';shown+=ids.length;return `<details class="relation-group" data-kind="${kind}" ${q||['INSTRUMENTO','MODALIDADE','ATRIBUTO_COMPLEMENTAR'].includes(kind)?'open':''}><summary><span>${name}</span><span>${fmt(ids.length)} ${ids.length===1?'registro':'registros'} +</span></summary><div class="relation-items">${ids.length?ids.slice(0,50).map(i=>relationItem(i,kind)).join(''):'<p class="relation-empty">Nenhum registro retornado pela base para esta relação.</p>'}</div>${ids.length>50?`<button class="more-relations" data-kind="${kind}">Mostrar todos os ${fmt(ids.length)} registros</button>`:''}</details>`}).join('')||'<p class="relation-empty">Nenhum relacionamento encontrado para este termo.</p>';
  document.querySelectorAll('.more-relations').forEach(b=>b.onclick=()=>{const kind=b.dataset.kind;const ids=(p.relations[kind]||[]).filter(i=>!q||norm([types[kind],...cat[i]].join(' ')).includes(q));b.previousElementSibling.innerHTML=ids.map(i=>relationItem(i,kind)).join('');b.remove();relatedLinks()});relatedLinks();
 }
-function relatedLinks(){document.querySelectorAll('[data-related]').forEach(a=>a.onclick=e=>{e.preventDefault();$('#search').value='';$('#group').value='';updateSubgroups();filter({preferred:a.dataset.related,mobile:true});tab='overview'})}
-function reset(){$('#search').value='';$('#group').value='';updateSubgroups();selected=null;filter()}
+function relatedLinks(){document.querySelectorAll('[data-related]').forEach(a=>a.onclick=e=>{e.preventDefault();$('#cid').value='';$('#cbo').value='';$('#search').value='';$('#group').value='';updateSubgroups();filter({preferred:a.dataset.related,mobile:true});tab='overview'})}
+function reset(){$('#cid').value='';$('#cbo').value='';relationSuggestions('CID');relationSuggestions('CBO');$('#search').value='';$('#group').value='';updateSubgroups();selected=null;filter()}
+function edition(){return db.competencia.slice(4)+'/'+db.competencia.slice(0,4)}
 function sourceDialog(){
- $('#source-content').innerHTML=`<p>Base <strong>SIGTAP 08/2026</strong>, extraída do arquivo DuckDB disponível no seu MVP. Consulta em leitura, com dados organizados pela competência.</p><div class="source-stats"><div><strong>${fmt(db.total)}</strong><span>procedimentos</span></div><div><strong>${db.hierarchy.groups.length}</strong><span>grupos</span></div><div><strong>70</strong><span>subgrupos</span></div></div><h3>Cobertura dos grupos</h3><table><tbody>${db.hierarchy.groups.map(([g,n])=>`<tr><td>${esc(g)} · ${esc(n)}</td><td>${fmt(db.counts[g])}</td></tr>`).join('')}</tbody></table><h3>Verificações realizadas</h3><p>Todos os procedimentos da tabela principal foram exportados. Os códigos são únicos, têm dez dígitos e estão vinculados à hierarquia. Foram verificadas 11 tabelas de vínculos sem procedimentos órfãos e amostras dos relacionamentos foram confrontadas com o MVP.</p><p class="validation-note">${fmt(db.withoutDescription)} procedimentos não possuem descrição na base. A importação original ainda não foi reconciliada com os TXT oficiais; essa limitação foi preservada. Esta é a competência 08/2026, sem atualização automática.</p><h3>Identificação da fonte</h3><p>sigtap_202608.duckdb · SHA-256</p><code>${esc(db.sha256)}</code>`;
+ $('#source-content').innerHTML=`<p>Base <strong>SIGTAP ${edition()}</strong>, extraída do arquivo DuckDB disponível no seu MVP. Consulta em leitura, com dados organizados pela competência.</p><div class="source-stats"><div><strong>${fmt(db.total)}</strong><span>procedimentos</span></div><div><strong>${db.hierarchy.groups.length}</strong><span>grupos</span></div><div><strong>${Object.values(db.hierarchy.subgroups).flat().length}</strong><span>subgrupos</span></div></div><h3>Cobertura dos grupos</h3><table><tbody>${db.hierarchy.groups.map(([g,n])=>`<tr><td>${esc(g)} · ${esc(n)}</td><td>${fmt(db.counts[g])}</td></tr>`).join('')}</tbody></table><h3>Verificações realizadas</h3><p>Todos os procedimentos da tabela principal foram exportados. Os códigos são únicos, têm dez dígitos e estão vinculados à hierarquia. Foram verificadas 11 tabelas de vínculos sem procedimentos órfãos e amostras dos relacionamentos foram confrontadas com o MVP.</p><p class="validation-note">${fmt(db.withoutDescription)} procedimentos não possuem descrição na base. A importação original ainda não foi reconciliada com os TXT oficiais; essa limitação foi preservada. Esta é a competência ${edition()}, sem atualização automática.</p><h3>Identificação da fonte</h3><p>sigtap_${db.competencia}.duckdb · SHA-256</p><code>${esc(db.sha256)}</code>`;
  $('#source-dialog').showModal();
 }
 $('#close-dialog').onclick=()=>$('#source-dialog').close();$('#source-dialog').addEventListener('click',e=>{if(e.target===$('#source-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close()}});
 async function init(){
- try{db=await fetchJSON('./data/index.json');all=db.procedures.map(([code,name])=>[code,name,norm(name)]);
+ try{[db,relationIndex]=await Promise.all([fetchJSON('./data/index.json'),fetchJSON('./data/relations-index.json')]);all=db.procedures.map(([code,name])=>[code,name,norm(name)]);
+ $('#edition').textContent=edition();document.querySelector('footer>span').innerHTML='<span class="status-dot"></span> Consulta à base '+edition();
  const h=db.hierarchy;options($('#group'),h.groups,'Todos os grupos');$('#group-total').textContent=h.groups.length;
  $('#base-count').textContent=`${h.groups.length} grupos · ${Object.values(h.subgroups).flat().length} subgrupos`;
  $('#group-nav').innerHTML=h.groups.map(([g,n])=>`<button class="group-button" data-group="${g}" aria-pressed="false" title="${esc(n)}"><span class="group-code">${g}</span><span class="group-name">${esc(shortGroups[g]||n)}</span><span class="group-count">${fmt(db.counts[g])}</span></button>`).join('');
@@ -101,7 +118,8 @@ async function init(){
  $('#search').addEventListener('input',()=>filter());$('#reset').onclick=reset;$('#all-groups').onclick=reset;
  $('#prev').onclick=()=>{if(page>0){page--;renderList()}};$('#next').onclick=()=>{if((page+1)*PAGE_SIZE<filtered.length){page++;renderList()}};
  $('#source-button').onclick=sourceDialog;$('#validation-link').onclick=sourceDialog;
- const url=new URLSearchParams(location.search);$('#search').value=url.get('q')||'';$('#group').value=url.get('g')||'';updateSubgroups();$('#subgroup').value=url.get('s')||'';updateForms();$('#form').value=url.get('f')||'';filter({preferred:url.get('p')});
+ for(const kind of ['CID','CBO']){const input=$('#'+kind.toLowerCase());input.addEventListener('input',()=>{relationSuggestions(kind);filter()})}
+ const url=new URLSearchParams(location.search);for(const kind of ['CID','CBO']){const id=kind.toLowerCase();$('#'+id).value=url.get(id)||'';relationSuggestions(kind)}$('#search').value=url.get('q')||'';$('#group').value=url.get('g')||'';updateSubgroups();$('#subgroup').value=url.get('s')||'';updateForms();$('#form').value=url.get('f')||'';filter({preferred:url.get('p')});
  document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)&&!$('#source-dialog').open){e.preventDefault();$('#search').focus()}});
  }catch(e){$('#result-count').textContent='Não foi possível carregar a base';$('#results').innerHTML='<div class="empty-results"><p>Confira sua conexão e recarregue a página.</p><button id="reload">Tentar novamente</button></div>';$('#reload').onclick=()=>location.reload();$('#group-nav').textContent='Base indisponível';console.error(e)}
 }

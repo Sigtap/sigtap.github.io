@@ -1,17 +1,19 @@
-# Explorador SIGTAP
+# SIGTAP Explorador
 
-Consulta pública da base SIGTAP de agosto de 2026: 5.023 procedimentos, 9 grupos, filtros por Grupo, Subgrupo e Forma de Organização, busca e detalhes ao selecionar.
+Consulta pública em https://sigtap.github.io/ com busca de procedimentos, grupo/subgrupo/forma, CID e CBO por código ou descrição e detalhes automáticos. CID e CBO simultâneos cruzam os vínculos (ambos devem estar presentes). Uma sugestão selecionada consulta o código exato; texto livre reúne os códigos correspondentes. Outros filtros continuam ativos.
 
-## Publicar no GitHub Pages
+A competência e os totais são lidos de `data/index.json`. A fonte é o DuckDB fornecido pelo responsável. A importação original não foi reconciliada com os TXT oficiais. Vínculos não substituem outras regras de faturamento; ausência de vínculo não indica dispensa.
 
-Em Settings → Pages, selecione Deploy from a branch, branch main e pasta / (root).
+## Atualizar com outro DuckDB
 
-## Testar localmente
+Use uma base SIGTAP nativa com uma única competência e estrutura compatível com o MVP.
 
-Execute `python -m http.server 8080` nesta pasta e abra http://localhost:8080.
+1. Instale Python e execute `python -m pip install -r requirements.txt` na pasta do projeto.
+2. Execute `python scripts/update_database.py` e escolha o `.duckdb` na janela. Alternativa: `python scripts/update_database.py "caminho/base.duckdb"`.
+3. A exportação ocorre em pasta temporária. Falhas na validação impedem a troca. A base anterior fica em `data-backup/` e nunca é enviada pelo Git.
+4. Revise `data/validation.json`, teste a interface com `python -m http.server 8000` e execute `node scripts/test-relations.cjs` se tiver Node instalado.
+5. Envie as mudanças em `data/` ao GitHub. O Pages publica a branch `main`, pasta raiz.
 
-## Fonte e limites
+O arquivo DuckDB não precisa ser publicado; somente o catálogo exportado. A interface pública ainda não oferece upload administrativo nem atualização automática agendada. A competência exibida acompanha os dados exportados.
 
-Dados exportados do banco DuckDB do MVP. São dados de procedimentos SIGTAP, sem dados de pacientes. 699 procedimentos não possuem descrição na base; a reconciliação com os TXT originais permanece pendente. Esta versão não se atualiza automaticamente.
-
-Relatório: data/validation.json. A consulta funciona inteiramente no navegador. Não contém autenticação; a publicação no GitHub Pages é pública.
+O gerador pode ser usado futuramente em GitHub Actions: `python scripts/export_web.py base.duckdb --output staging/data`, seguido de `python scripts/build-relations.py --data staging/data`. Revise e publique os arquivos somente após sucesso das validações.
