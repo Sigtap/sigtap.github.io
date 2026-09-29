@@ -31,6 +31,7 @@ function relationMatches(kind, value){
 }
 function relationSuggestions(kind){
  const id=kind.toLowerCase(),q=norm($('#'+id).value.trim()),code=relationCode(q);
+ if(!q){$('#'+id+'-options').innerHTML='';return}
  const entries=relationIndex[kind].filter(e=>!q||relationCode(e[0]).startsWith(code)||q.split(/\s+/).every(t=>norm(e[1]).includes(t)));
  $('#'+id+'-options').innerHTML=entries.slice(0,60).map(e=>`<option value="${esc(e[0])} — ${esc(e[1])}"></option>`).join('');
 }
@@ -110,6 +111,7 @@ $('#close-dialog').onclick=()=>$('#source-dialog').close();$('#source-dialog').a
 async function init(){
  try{[db,relationIndex]=await Promise.all([fetchJSON('./data/index.json'),fetchJSON('./data/relations-index.json')]);all=db.procedures.map(([code,name])=>[code,name,norm(name)]);
  $('#edition').textContent=edition();document.querySelector('footer>span').innerHTML='<span class="status-dot"></span> Consulta à base '+edition();
+ setupRelationBrowser();
  const h=db.hierarchy;options($('#group'),h.groups,'Todos os grupos');$('#group-total').textContent=h.groups.length;
  $('#base-count').textContent=`${h.groups.length} grupos · ${Object.values(h.subgroups).flat().length} subgrupos`;
  $('#group-nav').innerHTML=h.groups.map(([g,n])=>`<button class="group-button" data-group="${g}" aria-pressed="false" title="${esc(n)}"><span class="group-code">${g}</span><span class="group-name">${esc(shortGroups[g]||n)}</span><span class="group-count">${fmt(db.counts[g])}</span></button>`).join('');
@@ -123,4 +125,52 @@ async function init(){
  document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)&&!$('#source-dialog').open){e.preventDefault();$('#search').focus()}});
  }catch(e){$('#result-count').textContent='Não foi possível carregar a base';$('#results').innerHTML='<div class="empty-results"><p>Confira sua conexão e recarregue a página.</p><button id="reload">Tentar novamente</button></div>';$('#reload').onclick=()=>location.reload();$('#group-nav').textContent='Base indisponível';console.error(e)}
 }
+
+function setupRelationBrowser(){
+ const dialog=document.createElement('dialog');
+ dialog.id='relation-browser';
+ dialog.setAttribute('aria-labelledby','relation-browser-title');
+ dialog.innerHTML=`<div class="dialog-header"><h2 id="relation-browser-title">Explorar CIDs</h2><button type="button" id="relation-browser-close" aria-label="Fechar explorador">Fechar ×</button></div>
+ <div class="browser-controls"><label>Buscar código ou descrição<input id="browser-query" type="search" placeholder="Ex.: C50, N18 ou diabetes"></label><label>Letra inicial<select id="browser-letter"><option value="">Todas as letras</option></select></label></div>
+ <p id="browser-count" role="status"></p><div id="browser-results"></div>
+ <div class="browser-pagination"><button type="button" id="browser-prev">Anterior</button><span id="browser-page"></span><button type="button" id="browser-next">Próxima</button></div>`;
+ document.body.append(dialog);
+ let kind='CID',offset=0,opener;
+ const size=30;
+ function render(){
+  const q=norm($('#browser-query').value.trim()),letter=$('#browser-letter').value;
+  const entries=relationIndex[kind].filter(e=>(!letter||e[0].startsWith(letter))&&(!q||relationCode(e[0]).startsWith(relationCode(q))||q.split(/\s+/).every(t=>norm(e[1]).includes(t))));
+  const rows=entries.slice(offset,offset+size);
+  $('#browser-count').textContent=entries.length?`${fmt(offset+1)}–${fmt(offset+rows.length)} de ${fmt(entries.length)} códigos com procedimentos vinculados`:'Nenhum código encontrado. Tente outro termo ou letra.';
+  $('#browser-results').innerHTML=rows.map((e,i)=>`<button type="button" class="browser-result" data-row="${i}"><code>${esc(e[0])}</code><span>${esc(e[1])}</span><small>${fmt(e[2].length)} procedimentos</small></button>`).join('');
+  $('#browser-results').scrollTop=0;
+  $('#browser-results').querySelectorAll('button').forEach(b=>b.onclick=()=>{
+   const e=rows[Number(b.dataset.row)],input=$('#'+kind.toLowerCase());
+   input.value=e[0]+' — '+e[1];relationSuggestions(kind);filter();dialog.close();input.focus();
+  });
+  $('#browser-prev').disabled=offset===0;
+  $('#browser-next').disabled=offset+size>=entries.length;
+  $('#browser-page').textContent=entries.length?`Página ${Math.floor(offset/size)+1} de ${Math.ceil(entries.length/size)}`:'0 páginas';
+ }
+ $('#relation-browser-close').onclick=()=>dialog.close();
+ dialog.addEventListener('close',()=>opener?.focus());
+ $('#browser-query').oninput=$('#browser-letter').onchange=()=>{offset=0;render()};
+ $('#browser-prev').onclick=()=>{offset=Math.max(0,offset-size);render()};
+ $('#browser-next').onclick=()=>{offset+=size;render()};
+ for(const type of ['CID','CBO']){
+  const input=$('#'+type.toLowerCase()),button=document.createElement('button');
+  button.type='button';button.className='browse-relations';button.textContent=type==='CID'?'Explorar todos os CIDs':'Explorar todas as ocupações';
+  input.parentElement.append(button);
+  button.onclick=()=>{
+   kind=type;offset=0;opener=button;
+   $('#relation-browser-title').textContent=kind==='CID'?'Explorar CIDs':'Explorar ocupações';
+   $('#browser-query').value='';
+   const letters=[...new Set(relationIndex[kind].map(e=>e[0][0]))].sort();
+   $('#browser-letter').innerHTML='<option value="">Todas</option>'+letters.map(l=>`<option value="${esc(l)}">${esc(l)}</option>`).join('');
+   $('#browser-letter').parentElement.hidden=kind!=='CID';
+   render();dialog.showModal();$('#browser-query').focus();
+  };
+ }
+}
+
 init();
