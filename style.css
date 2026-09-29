@@ -9,3 +9,17 @@
 @media(max-width:640px){.field select{font-size:10px}.field label{font-size:10px}.proc-name{font-size:12px}}
 
 .relation-filters{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.relation-filters input{width:100%;min-width:0;height:39px;border:1px solid var(--line);border-radius:6px;background:white;padding:0 10px;color:var(--ink);font-size:12px}.filter-help{font-size:11px;color:#66765c;margin-top:9px;line-height:1.6}@media(max-width:640px){.relation-filters{grid-template-columns:1fr;gap:12px}.relation-filters .field:first-child{grid-column:auto}}
+
+.browse-relations{padding:7px 0;color:var(--green);font-size:12px;text-decoration:underline;text-underline-offset:3px}
+#relation-browser{max-width:780px}
+.browser-controls{display:grid;grid-template-columns:1fr 130px;gap:16px}
+.browser-controls label{display:grid;gap:6px;font-size:12px}
+.browser-controls input,.browser-controls select{padding:10px;border:1px solid var(--line);border-radius:6px;min-width:0;width:100%;background:white;color:var(--ink)}
+#browser-count{margin:16px 0;font-size:12px;color:#526746}
+#browser-results{max-height:45vh;overflow:auto;border-top:1px solid var(--line)}
+.browser-result{display:grid;grid-template-columns:65px 1fr;gap:4px 12px;width:100%;text-align:left;padding:13px 8px;border-bottom:1px solid var(--line)}
+.browser-result:hover,.browser-result:focus-visible{background:var(--soft)}
+.browser-result code{color:var(--green);font-weight:600}.browser-result span{font-size:13px;overflow-wrap:anywhere}.browser-result small{grid-column:2;color:#526746}
+.browser-pagination{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:18px;font-size:12px}
+.browser-pagination button{padding:8px 12px;border:1px solid var(--line);border-radius:5px}
+@media(max-width:480px){.browser-controls{grid-template-columns:1fr}.browser-result{grid-template-columns:52px 1fr}}
