@@ -85,17 +85,36 @@ function renderDetail(){
  if(tab==='overview')renderOverview();else renderRelations();
 }
 function datum(label,value,note=''){return `<div class="datum"><span>${label}</span><strong>${esc(value??'Não informado')}</strong>${note?`<small>${esc(note)}</small>`:''}</div>`}
+function formatAge(months){
+ if(months==null)return 'Não informado';
+ if(months===9999)return '9999 (código da base)';
+ if(months<12)return fmt(months)+(months===1?' mês':' meses');
+ const years=Math.floor(months/12);
+ return fmt(years)+(years===1?' ano':' anos');
+}
+function ageRange(min,max){
+ if(min!=null&&max!=null&&min>=12&&max>=12&&min!==9999&&max!==9999){
+  return fmt(Math.floor(min/12))+' / '+formatAge(max);
+ }
+ return formatAge(min)+' / '+formatAge(max);
+}
+function compatibilityInfo(condition){
+ const type=String(condition||'').match(/^Tipo\s+(\d+)(?=;|$)/i)?.[1];
+ if(type==='1')return {label:'Compatível',style:'compatible',description:'Tipo 1 · Compatível'};
+ if(type==='2')return {label:'Incompatível / excludente',style:'exclusive',description:'Tipo 2 · Não pode ser registrado em conjunto no mesmo ato assistencial, conforme a relação cadastrada'};
+ return null;
+}
 function renderOverview(){const p=current.p;
  const docs=(p.relations.ATRIBUTO_COMPLEMENTAR||[]).map(i=>current.cat[i]).filter(x=>['009','034','058'].includes(x[0])).map(x=>x[1]);
- const rawAge=x=>x==null?'Não informado':x===9999?'9999 (código da base)':fmt(x)+' meses';
- const max=p.quantidade_maxima===9999?'9999 (código da base)':p.quantidade_maxima==null?'Não informado':fmt(p.quantidade_maxima);
- $('#detail-body').innerHTML=`<div class="section-label">DESCRIÇÃO DO PROCEDIMENTO</div><p class="description ${p.descricao?'':'missing'}">${esc(p.descricao||'Descrição não disponível nesta base.')}</p><div class="detail-grid">${datum('Financiamento',[p.financiamento_codigo,p.financiamento_nome].filter(Boolean).join(' — '))}${datum('Instrumentos de registro',names('INSTRUMENTO').join(' · ')||'Sem registro na base')}${datum('Sexo',sex[p.sexo]||p.sexo)}${datum('Quantidade máxima',max)}${datum('Idade mínima / máxima',rawAge(p.idade_minima)+' / '+rawAge(p.idade_maxima),'Valores preservados da base SIGTAP')}${datum('Identificação do usuário',docs.join(' · ')||'Sem atributo de CPF/CNS informado','Conforme atributos complementares')}</div><div class="values"><div class="value-card"><span>AMBULATORIAL · SA</span><strong>${currency(p.valor_sa)}</strong></div><div class="value-card"><span>HOSPITALAR · SH</span><strong>${currency(p.valor_sh)}</strong></div><div class="value-card"><span>PROFISSIONAL · SP</span><strong>${currency(p.valor_sp)}</strong></div></div><p class="detail-note">Competência ${edition()} · Valores de referência presentes na base do projeto. Consulte os relacionamentos para os atributos e condicionantes.</p>`
+
+ const max=p.quantidade_maxima===9999?'Sem limite máximo':p.quantidade_maxima==null?'Não informado':fmt(p.quantidade_maxima);
+ $('#detail-body').innerHTML=`<div class="section-label">DESCRIÇÃO DO PROCEDIMENTO</div><p class="description ${p.descricao?'':'missing'}">${esc(p.descricao||'Descrição não disponível nesta base.')}</p><div class="detail-grid">${datum('Financiamento',[p.financiamento_codigo,p.financiamento_nome].filter(Boolean).join(' — '))}${datum('Instrumentos de registro',names('INSTRUMENTO').join(' · ')||'Sem registro na base')}${datum('Sexo',sex[p.sexo]||p.sexo)}${datum('Quantidade máxima',max)}${datum('Idade mínima / máxima',ageRange(p.idade_minima,p.idade_maxima))}${datum('Identificação do usuário',docs.join(' · ')||'Sem atributo de CPF/CNS informado','Conforme atributos complementares')}</div><div class="values"><div class="value-card"><span>AMBULATORIAL · SA</span><strong>${currency(p.valor_sa)}</strong></div><div class="value-card"><span>HOSPITALAR · SH</span><strong>${currency(p.valor_sh)}</strong></div></div><p class="professional-value"><span>Serviço profissional · SP</span> <strong>${currency(p.valor_sp)}</strong><small>Componente do total hospitalar (SH + SP).</small></p><p class="detail-note">Competência ${edition()} · Valores de referência presentes na base do projeto. Consulte os relacionamentos para os atributos e condicionantes.</p>`
 }
 function renderRelations(){
  $('#detail-body').innerHTML=`<input class="relation-search" id="relation-search" type="search" aria-label="Filtrar relacionamentos" placeholder="Filtrar por CBO, CID, código ou descrição…" value="${esc(relationTerm)}"><div id="relation-groups"></div><p class="detail-note">Ausência de registros não confirma dispensa de requisito. Os vínculos abaixo reproduzem a consulta do MVP nesta competência.</p>`;
  $('#relation-search').addEventListener('input',e=>{relationTerm=e.target.value;renderRelationGroups()});renderRelationGroups();
 }
-function relationItem(i,kind){const [code,name,condition]=current.cat[i];const isLink=kind==='COMPATIBILIDADE'&&all.some(p=>p[0]===code);return `<div class="relation-item">${isLink?`<a href="?p=${esc(code)}" data-related="${esc(code)}">${esc(code)} ↗</a>`:`<code>${esc(code||'—')}</code>`}<p>${esc(name||'Sem descrição')}</p>${condition?`<small>${esc(condition)}</small>`:''}</div>`}
+function relationItem(i,kind){const [code,name,condition]=current.cat[i];const isLink=kind==='COMPATIBILIDADE'&&all.some(p=>p[0]===code);const compat=kind==='COMPATIBILIDADE'?compatibilityInfo(condition):null;return `<div class="relation-item">${isLink?`<a href="?p=${esc(code)}" data-related="${esc(code)}">${esc(code)} ↗</a>`:`<code>${esc(code||'—')}</code>`}<p>${esc(name||'Sem descrição')}</p>${compat?`<span class="compatibility-badge ${compat.style}" title="${esc(compat.description)}">${esc(compat.label)}</span>`:''}${condition?`<small>${esc(condition)}</small>`:''}</div>`}
 function renderRelationGroups(){const q=norm(relationTerm),{p,cat}=current;let shown=0;
  $('#relation-groups').innerHTML=Object.entries(types).map(([kind,name])=>{let ids=p.relations[kind]||[];if(q)ids=ids.filter(i=>norm([name,...cat[i]].join(' ')).includes(q));if(q&&!ids.length)return '';shown+=ids.length;return `<details class="relation-group" data-kind="${kind}" ${q||['INSTRUMENTO','MODALIDADE','ATRIBUTO_COMPLEMENTAR'].includes(kind)?'open':''}><summary><span>${name}</span><span>${fmt(ids.length)} ${ids.length===1?'registro':'registros'} +</span></summary><div class="relation-items">${ids.length?ids.slice(0,50).map(i=>relationItem(i,kind)).join(''):'<p class="relation-empty">Nenhum registro retornado pela base para esta relação.</p>'}</div>${ids.length>50?`<button class="more-relations" data-kind="${kind}">Mostrar todos os ${fmt(ids.length)} registros</button>`:''}</details>`}).join('')||'<p class="relation-empty">Nenhum relacionamento encontrado para este termo.</p>';
  document.querySelectorAll('.more-relations').forEach(b=>b.onclick=()=>{const kind=b.dataset.kind;const ids=(p.relations[kind]||[]).filter(i=>!q||norm([types[kind],...cat[i]].join(' ')).includes(q));b.previousElementSibling.innerHTML=ids.map(i=>relationItem(i,kind)).join('');b.remove();relatedLinks()});relatedLinks();
