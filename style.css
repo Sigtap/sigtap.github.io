@@ -23,3 +23,12 @@
 .browser-pagination{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:18px;font-size:12px}
 .browser-pagination button{padding:8px 12px;border:1px solid var(--line);border-radius:5px}
 @media(max-width:480px){.browser-controls{grid-template-columns:1fr}.browser-result{grid-template-columns:52px 1fr}}
+
+/* Keep billing components distinct and relationship statuses readable without color alone. */
+.values{grid-template-columns:repeat(2,minmax(0,1fr))}
+.professional-value{margin-top:10px;font-size:11px;color:#647462;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+.professional-value strong{font-weight:500;font-size:12px}.professional-value small{flex-basis:100%;font-size:10px;color:#647462}
+.compatibility-badge{display:inline-flex;align-items:center;gap:5px;margin-top:6px;padding:2px 7px;border:1px solid;border-radius:4px;font-size:10px;line-height:1.6}
+.compatibility-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor}
+.compatibility-badge.compatible{color:#32617c;background:#f0f6fa;border-color:#d4e3ee}
+.compatibility-badge.exclusive{color:#87541d;background:#fcf5ec;border-color:#efdfca}
