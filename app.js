@@ -87,12 +87,13 @@ function renderDetail(){
 function datum(label,value,note=''){return `<div class="datum"><span>${label}</span><strong>${esc(value??'Não informado')}</strong>${note?`<small>${esc(note)}</small>`:''}</div>`}
 function formatAge(months){
  if(months==null)return 'Não informado';
- if(months===9999)return '9999 (código da base)';
+ if(months===9999)return 'Sem limite';
  if(months<12)return fmt(months)+(months===1?' mês':' meses');
  const years=Math.floor(months/12);
  return fmt(years)+(years===1?' ano':' anos');
 }
 function ageRange(min,max){
+ if(min===9999&&max===9999)return 'Não se aplica';
  if(min!=null&&max!=null&&min>=12&&max>=12&&min!==9999&&max!==9999){
   return fmt(Math.floor(min/12))+' / '+formatAge(max);
  }
