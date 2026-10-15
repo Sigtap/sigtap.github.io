@@ -182,8 +182,8 @@ def build(con):
     return procs, lookups
 
 
-def read_cbo_familias(path, known):
-    """Family titles from the official MTE file (not in the SIGTAP base). Fails on unknown layouts."""
+def read_titles(path, extra_cols=()):
+    """CODIGO;TITULO[;...] CSV in UTF-8 or Windows-1252, values trimmed. Fails on an unknown header."""
     raw = path.read_bytes()
     for encoding in ('utf-8-sig', 'cp1252'):
         try:
@@ -195,9 +195,23 @@ def read_cbo_familias(path, known):
     header = [h.strip().upper() for h in rows[0]]
     if header[:2] != ['CODIGO', 'TITULO']:
         raise SystemExit(f'{path.name}: expected header CODIGO;TITULO, got {rows[0]}')
-    names = {r[0].strip(): r[1].strip() for r in rows[1:] if len(r) >= 2 and r[0].strip()}
+    return {r[0].strip(): r[1].strip() for r in rows[1:] if len(r) >= 2 and r[0].strip()}
+
+
+def read_cbo_familias(source_dir, known):
+    """Titles of the CBO families used by SIGTAP, for the "Categoria" sub-tab only.
+
+    The SIGTAP base has no family titles. They come from the Ministério do
+    Trabalho file "CBO2002 - Familia.csv"; families the SUS defines itself
+    (e.g. 2231 Médicos) come from cbo-familias-sigtap.csv, taken from the
+    SIGTAP screen. Nothing else from the MTE files reaches the site.
+    """
+    names = read_titles(source_dir / 'cbo-mte' / 'CBO2002 - Familia.csv')
+    sigtap_file = source_dir / 'cbo-familias-sigtap.csv'
+    if sigtap_file.exists():
+        names.update(read_titles(sigtap_file))
     missing = sorted(set(known) - set(names))
-    print(f'cbo_familia_nome: {len(names)} titles from {path.name}; {len(missing)} SIGTAP families without a title {missing[:10]}')
+    print(f'cbo_familia_nome: {len(known) - len(missing)}/{len(known)} SIGTAP families titled; without title: {missing[:10]}')
     return {code: names[code] for code in sorted(known) if code in names}
 
 
@@ -218,7 +232,8 @@ def main():
     ap.add_argument('--db', required=True, help='SIGTAP DuckDB (opened read-only)')
     ap.add_argument('--data', default=str(DEFAULT_DATA))
     ap.add_argument('--check', action='store_true', help='report changes without writing')
-    ap.add_argument('--cbo-familias', help='official CBO 2002 family titles (MTE "CBO2002 - Familia.csv": CODIGO;TITULO)')
+    ap.add_argument('--fontes', default=str(HERE.parent / 'fontes'),
+                    help='folder with cbo-mte/ and cbo-familias-sigtap.csv (CBO family titles); skipped if absent')
     args = ap.parse_args()
     data_dir = pathlib.Path(args.data)
 
@@ -247,8 +262,9 @@ def main():
     if missing:
         raise SystemExit(f'{len(missing)} procedures from tb_procedimento are in no group file, e.g. {sorted(missing)[:5]}')
 
-    if args.cbo_familias:
-        lookups['cbo_familia_nome'] = read_cbo_familias(pathlib.Path(args.cbo_familias), lookups['cbo_familia_total'])
+    fontes = pathlib.Path(args.fontes)
+    if (fontes / 'cbo-mte' / 'CBO2002 - Familia.csv').exists():
+        lookups['cbo_familia_nome'] = read_cbo_familias(fontes, lookups['cbo_familia_total'])
     status, before, after = write_if_changed(data_dir / 'lookups.json', dump(lookups), args.check)
     print(f'lookups.json: {before} -> {after} bytes ({status})')
     with_sigtap = sum(1 for s in procs.values() if s)

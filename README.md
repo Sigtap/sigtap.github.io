@@ -19,7 +19,7 @@ Tudo vem do DuckDB, por script, de forma determinística: rodar o fluxo de novo 
 - `scripts/build-relations.py`: índice reverso CID/CBO.
 - `scripts/export_ficha.py`: chave `sigtap` de cada procedimento (média e tempo de permanência, pontos, subtipo de financiamento, leito, habilitações e grupos, incremento, origem SIGTAP e SIA/SIH, redes, Renases, TUSS, compatibilidades nos dois sentidos) e `data/lookups.json`.
 
-A página só formata (código 04.07.02.017-9, idade em anos, 9999 como "Não se aplica", Total Hospitalar = SH + SP). O modo "Legível" muda apenas maiúsculas e minúsculas; "Original" mostra o texto exato da base. As "Categorias" de CBO são as famílias CBO (4 dígitos) com todas as ocupações vinculadas; os nomes das famílias não estão na base SIGTAP e só aparecem se o arquivo oficial da CBO for informado (`--cbo-familias "CBO2002 - Familia.csv"` no `export_ficha.py`).
+A página só formata (código 04.07.02.017-9, idade em anos, 9999 como "Não se aplica", Total Hospitalar = SH + SP). O modo "Legível" muda apenas maiúsculas e minúsculas; "Original" mostra o texto exato da base. As "Categorias" de CBO são as famílias CBO (4 dígitos) com todas as ocupações vinculadas; os títulos das famílias não estão na base SIGTAP e vêm de `fontes/` (ver `fontes/README.md`); é o único uso de dado externo.
 
 ## Atualizar com outro DuckDB
 
