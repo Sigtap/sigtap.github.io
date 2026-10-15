@@ -2365,3 +2365,9 @@ dialog::backdrop {
 .report-data thead th { position: static; }
 .report-data thead tr:nth-child(2) th { top: auto; }
 .report-legend { margin: -2px 0 8px; font-size: var(--fs-xs); color: var(--muted); }
+
+/* v6: Categoria as in the SIGTAP screen: one column "2231 - Médicos" */
+.families-head,
+.family summary { grid-template-columns: 1.6em minmax(0, 1fr) auto; }
+.families-head { text-align: left; }
+.family-name { font-weight: 500; color: var(--value); }

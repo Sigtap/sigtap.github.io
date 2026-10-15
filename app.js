@@ -1260,6 +1260,14 @@ function cboSections(ctx) {
   return sections;
 }
 
+/** "Médicos em medicina diagnóstica" → "Médicos em Medicina Diagnóstica", as the SIGTAP Categoria list shows it. */
+const TITLE_PARTICLES = new Set('a à ao aos as da das de do dos e em na nas no nos o os ou para pela pelas pelo pelos por com sem'.split(' '));
+function categoryTitle(text) {
+  return text.split(' ').map((word, i) => (i > 0 && TITLE_PARTICLES.has(word.toLowerCase())
+    ? word.toLowerCase()
+    : word.charAt(0).toUpperCase() + word.slice(1))).join(' ');
+}
+
 function renderCboFamilies(families, lk) {
   const memberTotal = families.reduce((sum, [, members]) => sum + members.length, 0);
   const names = lk.cbo_familia_nome || {};
@@ -1274,8 +1282,7 @@ function renderCboFamilies(families, lk) {
     return `<details class="family${i % 2 ? ' alt' : ''}" data-family="${esc(norm(`${family} ${name || ''} ${preview}`))}">
         <summary title="${esc(preview)}">
           <span class="family-chevron" aria-hidden="true">${icon('right')}</span>
-          <span class="mono family-code">${family}</span>
-          <span class="family-name">${name ? esc(name) : `Família CBO ${family}`}</span>
+          <span class="family-name">${family} - ${name ? esc(categoryTitle(name)) : 'Família CBO sem título'}</span>
           <span class="family-count">${plural(members.length, 'ocupação', 'ocupações')}</span>
         </summary>
         ${table}
@@ -1286,12 +1293,12 @@ function renderCboFamilies(families, lk) {
     <div class="filterable">
       ${showFilter ? filterBar(families.length, 'Filtrar categorias', families.length === 1 ? 'categoria' : 'categorias') : ''}
       <div class="families" role="list">
-        <div class="families-head" aria-hidden="true"><span></span><span>Código</span><span>Categoria</span><span>Ocupações</span></div>
+        <div class="families-head" aria-hidden="true"><span></span><span>Categoria</span><span></span></div>
         ${items}
       </div>
       <p class="no-match" hidden>Nenhuma categoria corresponde ao filtro.</p>
       <p class="footnote">Categoria = família CBO (4 primeiros dígitos) com todas as ocupações vinculadas a este procedimento.
-        Clique numa categoria para ver as ocupações.${Object.keys(names).length ? '' : ' Os nomes das famílias não estão na base SIGTAP; virão da tabela oficial da CBO (MTE).'}</p>
+        Clique numa categoria para ver as ocupações. Os títulos das famílias não estão na base SIGTAP: vêm do arquivo de famílias da CBO 2002 (Ministério do Trabalho), e o da 2231 da tela do SIGTAP.</p>
     </div>`;
 }
 
