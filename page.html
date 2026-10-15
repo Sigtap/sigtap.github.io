@@ -1,0 +1,251 @@
+<title>SIGTAP Explorador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;500;600;700&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="./style.css">
+
+<a class="skip-link" href="#search">Ir para a busca</a>
+
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Navegação por grupos">
+    <a class="brand" href="./" aria-label="SIGTAP Explorador, início">
+      <span class="brand-icon" aria-hidden="true">S<span>+</span></span>
+      <span class="brand-text">SIGTAP<small>Explorador</small></span>
+    </a>
+    <button id="all-groups" class="nav-main active" type="button">
+      <span data-icon="grid"></span><span>Todos os procedimentos</span>
+    </button>
+    <div class="nav-section" data-section="groups">
+      <button type="button" class="section-toggle" aria-expanded="true" aria-controls="group-nav" title="Recolher ou expandir os grupos">
+        <span class="section-chevron" data-icon="chevron"></span>
+        <span class="section-title">Grupos</span>
+        <span id="base-count" class="section-meta">—</span>
+      </button>
+      <nav id="group-nav" class="section-body" aria-label="Grupos SIGTAP">
+        <div class="loading-small">Carregando grupos…</div>
+      </nav>
+    </div>
+
+    <button type="button" class="reports-button" id="reports-button" aria-pressed="false">
+      <span data-icon="report"></span><span class="section-title">Relatórios</span><span id="report-count" class="section-meta"></span>
+    </button>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1>Explorador SIGTAP</h1>
+        <span class="edition-chip">Competência <strong id="edition">—</strong></span>
+      </div>
+
+      <div class="reading-controls" role="group" aria-label="Opções de leitura">
+        <div class="control">
+          <span class="control-label" id="size-label">Tamanho do texto</span>
+          <div class="segmented" role="group" aria-labelledby="size-label">
+            <button type="button" data-size="s" aria-label="Texto menor (14 px)" aria-pressed="false">A−</button>
+            <button type="button" data-size="m" aria-label="Texto padrão (15 px)" aria-pressed="true">A</button>
+            <button type="button" data-size="l" aria-label="Texto maior (17 px)" aria-pressed="false">A+</button>
+          </div>
+        </div>
+        <div class="control">
+          <span class="control-label" id="case-label">Texto</span>
+          <div class="segmented" role="group" aria-labelledby="case-label" aria-describedby="case-note">
+            <button type="button" data-case="legivel" aria-pressed="true" title="Frases com inicial maiúscula, siglas preservadas&#10;Legível: só altera maiúsculas/minúsculas; Original: texto exato da base">Legível</button>
+            <button type="button" data-case="original" aria-pressed="false" title="Texto exatamente como na base oficial (maiúsculas)&#10;Legível: só altera maiúsculas/minúsculas; Original: texto exato da base">Original</button>
+          </div>
+          <span class="sr-only" id="case-note">Legível: só altera maiúsculas/minúsculas; Original: texto exato da base</span>
+        </div>
+      </div>
+
+      <button class="source-button" id="source-button" type="button" aria-label="Fonte e validação dos dados">
+        <span data-icon="database"></span><span>Fonte e validação</span>
+      </button>
+    </header>
+
+    <section class="explorer" aria-label="Explorador de procedimentos">
+      <div class="filters">
+        <div class="search-row">
+          <div class="search-wrap">
+            <span data-icon="search"></span>
+            <input id="search" type="search" placeholder="Busque pelo nome ou código (ex.: enterectomia, 04.07.02.017-9)…" aria-label="Buscar por nome ou código do procedimento" autocomplete="off">
+            <kbd title="Atalho: tecla /">/</kbd>
+          </div>
+          <button id="reset" class="reset-button" type="button" title="Limpar busca e filtros">
+            <span data-icon="reset"></span><span>Limpar</span>
+          </button>
+        </div>
+
+        <div class="filter-grid">
+          <div class="field">
+            <div class="field-head"><label for="group">Grupo</label></div>
+            <select id="group"><option value="">Todos os grupos</option></select>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="subgroup">Sub-Grupo</label></div>
+            <select id="subgroup" disabled><option value="">Selecione um grupo</option></select>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="form">Forma de Organização</label></div>
+            <select id="form" disabled><option value="">Selecione um sub-grupo</option></select>
+          </div>
+          <div class="field">
+            <div class="field-head">
+              <span class="label-help">
+                <label for="cid">CID — diagnóstico</label>
+                <button type="button" class="info-button" id="relation-help-button" aria-expanded="false" aria-controls="relation-help" aria-label="Como funcionam os filtros CID e CBO">?</button>
+              </span>
+              <button type="button" class="browse-relations" data-browse="CID">Explorar CIDs</button>
+            </div>
+            <p id="relation-help" class="info-popover" role="note" hidden>
+              CID e CBO: escolha uma sugestão para filtrar por um código exato; com os dois preenchidos, aparecem os procedimentos vinculados a ambos.
+            </p>
+            <input id="cid" type="search" list="cid-options" placeholder="Código ou descrição do CID…" autocomplete="off" aria-describedby="relation-help">
+            <datalist id="cid-options"></datalist>
+          </div>
+          <div class="field">
+            <div class="field-head">
+              <label for="cbo">CBO — ocupação</label>
+              <button type="button" class="browse-relations" data-browse="CBO">Explorar CBOs</button>
+            </div>
+            <input id="cbo" type="search" list="cbo-options" placeholder="Código ou nome da ocupação…" autocomplete="off" aria-describedby="relation-help">
+            <datalist id="cbo-options"></datalist>
+          </div>
+        </div>
+      </div>
+
+      <div class="workspace" id="workspace">
+        <section class="list-panel" aria-label="Lista de procedimentos">
+          <div class="list-heading">
+            <p><strong id="result-count" aria-live="polite">Carregando procedimentos…</strong><span id="result-context"></span></p>
+            <span id="list-range"></span>
+          </div>
+          <div id="results" class="results">
+            <div class="loading-state">Preparando sua consulta…</div>
+          </div>
+          <div class="pagination">
+            <span id="page-label"></span>
+            <div>
+              <button id="prev" type="button" aria-label="Página anterior" disabled><span data-icon="left"></span></button>
+              <button id="next" type="button" aria-label="Próxima página" disabled><span data-icon="right"></span></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-panel" id="detail-panel" aria-label="Ficha do procedimento">
+          <div id="detail">
+            <div class="empty-detail">
+              <span data-icon="file"></span>
+              <h2>Selecione um procedimento</h2>
+              <p>A ficha completa aparece aqui, no formato da tabela SIGTAP.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="reports-view" id="reports-view" aria-labelledby="report-title" hidden>
+      <header class="report-head">
+        <div>
+          <p class="eyebrow">Relatórios</p>
+          <h2 id="report-title" tabindex="-1">Relatórios</h2>
+          <p id="report-desc" class="report-desc"></p>
+        </div>
+        <div class="report-head-actions">
+          <button type="button" class="report-back" id="report-catalog-back" hidden><span data-icon="grid"></span><span>Todos os relatórios</span></button>
+          <button type="button" class="report-back" id="report-back"><span data-icon="left"></span><span>Voltar ao explorador</span></button>
+        </div>
+      </header>
+
+      <div id="report-catalog" class="report-catalog"></div>
+
+      <div id="report-runner" hidden>
+        <div class="report-controls">
+          <div class="field field-topic">
+            <div class="field-head"><label for="r-topic">Buscar na classificação</label></div>
+            <input id="r-topic" type="search" placeholder="Ex.: quimioterapia, nefrologia, 03.04…" autocomplete="off" aria-describedby="r-topic-help">
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="r-group">Grupo</label></div>
+            <select id="r-group"><option value="">Todos os grupos</option></select>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="r-subgroup">Sub-Grupo</label></div>
+            <select id="r-subgroup" disabled><option value="">Selecione um grupo</option></select>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="r-form">Forma de Organização</label></div>
+            <select id="r-form" disabled><option value="">Selecione um sub-grupo</option></select>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="r-proc">Procedimento</label></div>
+            <input id="r-proc" type="search" placeholder="Código ou nome…" autocomplete="off">
+          </div>
+          <div class="field" id="r-link-field">
+            <div class="field-head"><label for="r-link" id="r-link-label">Vínculo</label></div>
+            <input id="r-link" type="search" placeholder="Código ou nome…" autocomplete="off">
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="r-groupby">Agrupar por</label></div>
+            <select id="r-groupby">
+              <option value="proc">Procedimento</option>
+              <option value="link">Vínculo</option>
+              <option value="none">Sem agrupamento (uma linha por vínculo)</option>
+            </select>
+          </div>
+        </div>
+        <div class="topic-matches" id="r-topic-matches" hidden></div>
+        <p class="sr-only" id="r-topic-help">Procura grupos, sub-grupos e formas de organização da classificação oficial da Tabela SIGTAP; marque os itens que entram no relatório.</p>
+        <div class="report-bar">
+          <p id="report-summary" role="status" aria-live="polite"></p>
+          <div class="report-actions">
+            <button type="button" class="report-copy" id="report-pdf" disabled><span data-icon="file"></span><span>Baixar PDF</span></button>
+            <button type="button" class="report-copy" id="report-csv" disabled><span data-icon="file"></span><span>Baixar CSV (Excel)</span></button>
+            <button type="button" class="report-copy" id="report-copy" disabled><span data-icon="copy"></span><span>Copiar tabela</span></button>
+          </div>
+        </div>
+        <p id="report-legend" class="report-legend" hidden></p>
+        <div id="report-table" class="report-table"></div>
+        <div class="report-pager">
+          <span id="report-page"></span>
+          <div>
+            <button id="report-prev" type="button" aria-label="Página anterior do relatório" disabled><span data-icon="left"></span></button>
+            <button id="report-next" type="button" aria-label="Próxima página do relatório" disabled><span data-icon="right"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<dialog id="source-dialog" aria-labelledby="source-title">
+  <div class="dialog-header">
+    <div>
+      <div class="eyebrow">Transparência dos dados</div>
+      <h2 id="source-title">Fonte e validação</h2>
+    </div>
+    <button id="close-dialog" class="icon-button" type="button" aria-label="Fechar"><span data-icon="close"></span></button>
+  </div>
+  <div id="source-content"></div>
+</dialog>
+
+<dialog id="relation-browser" aria-labelledby="relation-browser-title">
+  <div class="dialog-header">
+    <h2 id="relation-browser-title">Explorar CIDs</h2>
+    <button type="button" class="icon-button" id="relation-browser-close" aria-label="Fechar explorador"><span data-icon="close"></span></button>
+  </div>
+  <div class="browser-controls">
+    <label>Buscar código ou descrição<input id="browser-query" type="search" placeholder="Ex.: C50, N18 ou diabetes"></label>
+    <label id="browser-letter-field">Letra inicial<select id="browser-letter"><option value="">Todas</option></select></label>
+  </div>
+  <p id="browser-count" role="status"></p>
+  <div id="browser-results"></div>
+  <div class="browser-pagination">
+    <button type="button" id="browser-prev">Anterior</button>
+    <span id="browser-page"></span>
+    <button type="button" id="browser-next">Próxima</button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="./app.js"></script>

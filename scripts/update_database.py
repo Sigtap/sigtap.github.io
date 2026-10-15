@@ -21,6 +21,8 @@ with tempfile.TemporaryDirectory() as folder:
     staging = Path(folder)/'data'
     subprocess.run([sys.executable, str(ROOT/'scripts/export_web.py'), str(args.database), '--output', str(staging)], check=True)
     subprocess.run([sys.executable, str(ROOT/'scripts/build-relations.py'), '--data', str(staging)], check=True)
+    # Ficha fields and tabs (permanência, pontos, leito, incremento, origem, Renases, compatibilidades…) and lookups.json.
+    subprocess.run([sys.executable, str(ROOT/'scripts/export_ficha.py'), '--db', str(args.database), '--data', str(staging)], check=True)
     backup = ROOT/'data-backup'
     if backup.exists():
         sys.exit('data-backup já existe. Preserve ou renomeie essa pasta antes de atualizar novamente.')

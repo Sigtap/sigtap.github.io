@@ -4,6 +4,23 @@ Consulta pública em https://sigtap.github.io/ com busca de procedimentos, grupo
 
 A competência e os totais são lidos de `data/index.json`. A fonte é o DuckDB fornecido pelo responsável. A importação original não foi reconciliada com os TXT oficiais. Vínculos não substituem outras regras de faturamento; ausência de vínculo não indica dispensa.
 
+## Estrutura da página
+
+- `page.html` é a fonte da página; `python scripts/build_page.py` gera o `index.html` publicado (rode após editar `page.html`; `--check` confere se está atualizado).
+- `app.js` e `style.css`: ficha no formato SIGTAP (atributos em ordem fixa, Valores, abas de vínculos) e relatórios com download em PDF e CSV.
+- `vendor/`: jsPDF 2.5.1 e jsPDF-AutoTable 3.8.2 (MIT), carregados só ao gerar um PDF.
+- `historico/`: layouts anteriores, preservados.
+
+## De onde vem cada dado
+
+Tudo vem do DuckDB, por script, de forma determinística: rodar o fluxo de novo com a mesma base gera os mesmos arquivos, byte a byte.
+
+- `scripts/export_web.py`: procedimentos, hierarquia, vínculos (CID, CBO, instrumento, modalidade, atributos, habilitação, serviço, compatibilidade, regra condicionada) e `validation.json`.
+- `scripts/build-relations.py`: índice reverso CID/CBO.
+- `scripts/export_ficha.py`: chave `sigtap` de cada procedimento (média e tempo de permanência, pontos, subtipo de financiamento, leito, habilitações e grupos, incremento, origem SIGTAP e SIA/SIH, redes, Renases, TUSS, compatibilidades nos dois sentidos) e `data/lookups.json`.
+
+A página só formata (código 04.07.02.017-9, idade em anos, 9999 como "Não se aplica", Total Hospitalar = SH + SP). O modo "Legível" muda apenas maiúsculas e minúsculas; "Original" mostra o texto exato da base. As "Categorias" de CBO são as famílias CBO (4 dígitos) com todas as ocupações vinculadas; os nomes das famílias não estão na base SIGTAP e só aparecem se o arquivo oficial da CBO for informado (`--cbo-familias "CBO2002 - Familia.csv"` no `export_ficha.py`).
+
 ## Atualizar com outro DuckDB
 
 Use uma base SIGTAP nativa com uma única competência e estrutura compatível com o MVP.
@@ -16,4 +33,4 @@ Use uma base SIGTAP nativa com uma única competência e estrutura compatível c
 
 O arquivo DuckDB não precisa ser publicado; somente o catálogo exportado. A interface pública ainda não oferece upload administrativo nem atualização automática agendada. A competência exibida acompanha os dados exportados.
 
-O gerador pode ser usado futuramente em GitHub Actions: `python scripts/export_web.py base.duckdb --output staging/data`, seguido de `python scripts/build-relations.py --data staging/data`. Revise e publique os arquivos somente após sucesso das validações.
+O gerador pode ser usado futuramente em GitHub Actions: `python scripts/export_web.py base.duckdb --output staging/data`, seguido de `python scripts/build-relations.py --data staging/data` e `python scripts/export_ficha.py --db base.duckdb --data staging/data`. Revise e publique os arquivos somente após sucesso das validações.
