@@ -49,6 +49,8 @@
   --note-line: #e8dcbc;
   --note-ink: #5c4a1c;
 
+  --nohab: #b42318;          /* 6.0:1 on white: the "sem habilitação" mark */
+
   /* Pastel accents: one per role, always with a dark ink of the same hue (>= 6:1). */
   --mint-bg: #eef8f2;   --mint-line: #bfe0cf;   --mint-ink: #1f5a45;
   --peach-bg: #fdf3ec;  --peach-line: #f2cfba;  --peach-ink: #8a3b1e;
@@ -2506,3 +2508,55 @@ dialog::backdrop {
 @media (max-width: 640px) {
   .portaria { white-space: normal; }
 }
+
+/* Sem habilitação (CNES): a small red ⊗ next to the name */
+.nohab {
+  display: inline-flex;
+  vertical-align: -0.15em;
+  margin-right: 5px;
+  color: var(--nohab);
+}
+
+.nohab svg { width: 1em; height: 1em; stroke-width: 2; }
+
+.nohab-button {
+  margin: 0 0 0 4px;
+  padding: 2px;
+  border-radius: 50%;
+  vertical-align: -0.1em;
+}
+
+.nohab-button svg { width: 0.8em; height: 0.8em; }
+.nohab-button:hover,
+.nohab-button[aria-expanded="true"] { background: var(--rose-bg); }
+
+.nohab-note {
+  margin-top: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--rose-line);
+  border-radius: 8px;
+  background: var(--rose-bg);
+  font-size: var(--fs-row);
+  color: var(--rose-ink);
+}
+
+.nohab-note ul { margin: 4px 0 4px 18px; padding: 0; }
+.nohab-note .sub-line { display: block; color: var(--muted); }
+
+/* "Voltar" to where a linked procedure was opened from */
+.back-trail {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+  padding: 3px 10px 3px 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+.back-trail svg { width: 16px; height: 16px; }
+.back-trail:hover { background: var(--zebra); border-color: var(--brand-line); }

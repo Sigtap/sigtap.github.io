@@ -56,6 +56,7 @@ const ICON_PATHS = {
   copy: '<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>',
   chevron: '<path d="m6 9 6 6 6-6"/>',
   report: '<path d="M5 3h10l4 4v14H5zM9 12h6M9 16h6M9 8h3"/>',
+  nohab: '<circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/>',
 };
 
 function icon(name) {
@@ -572,7 +573,7 @@ function listRow([code, name], full) {
   const selected = code === state.selected;
   return `<button type="button" class="proc-row${selected ? ' selected' : ''}" data-code="${code}" aria-pressed="${selected}" title="${maskProcedure(code)} ${esc(display(name))}">
       <span class="proc-code">${maskProcedure(code)}</span>
-      <span class="proc-name${full ? ' full' : ''}">${esc(display(name))}</span>
+      <span class="proc-name${full ? ' full' : ''}">${habMark(code)}${esc(display(name))}</span>
     </button>`;
 }
 
@@ -667,9 +668,13 @@ function setMobileDetail(on) {
 
 const isMobileLayout = () => window.matchMedia('(max-width: 760px)').matches;
 
-/** Open a procedure from a link inside the ficha (compatibilidades, origem); focus its name. */
-function openLinkedProcedure(code) {
+/**
+ * Open a procedure from a link (a ficha's compatibilidades, Novidades, a report)
+ * and focus its name. `from` is where the link was: the ficha then offers "Voltar".
+ */
+function openLinkedProcedure(code, from = null) {
   if (!state.nameByCode.has(code)) { toast(`Procedimento ${maskProcedure(code)} não está nesta base.`); return; }
+  if (from) { trail.push(from); if (trail.length > 30) trail.shift(); }
   if (!state.filtered.some((p) => p[0] === code)) resetFilters();
   filter({ preferred: code, mobile: isMobileLayout(), focusName: true });
 }
@@ -746,12 +751,14 @@ function renderFichaHeader({ p }) {
   return `
     <header class="ficha-header">
       <button type="button" class="back-list" data-action="back">${icon('left')} Voltar aos procedimentos</button>
+      ${trail.length ? `<button type="button" class="back-trail" data-action="trail">${icon('left')}<span>${esc(trailLabel(trail.at(-1)))}</span></button>` : ''}
       <div class="ficha-code-row">
         <span class="ficha-code" aria-label="Código ${maskProcedure(p.codigo)}">${maskProcedure(p.codigo)}</span>
         <button type="button" class="copy-button" data-action="copy" data-code="${p.codigo}" title="Copiar código (somente números)">${icon('copy')}<span>Copiar código</span></button>
         <p class="ficha-meta">Competência ${competenciaLabel()}</p>
       </div>
-      <h2 class="ficha-name" tabindex="-1">${esc(display(p.nome))}</h2>
+      <h2 class="ficha-name" tabindex="-1">${esc(display(p.nome))}${habButton(p.codigo)}</h2>
+      ${habNote(p.codigo)}
     </header>`;
 }
 
@@ -854,8 +861,11 @@ async function openDetail(code, { mobile = false, focusName = false } = {}) {
     const ctx = buildContext(p, catalog, lookups);
     const tabs = buildTabs(ctx);
     state.detail = { ctx, tabs, activeTab: chooseDefaultTab(tabs), activeSub: {} };
+    const back = state.restore?.code === code ? state.restore : null;
+    state.restore = null;
+    if (back && tabs.some((t) => t.id === back.tab && t.enabled)) Object.assign(state.detail, { activeTab: back.tab, activeSub: back.sub });
     renderDetail();
-    $('#detail-panel').scrollTop = 0;
+    $('#detail-panel').scrollTop = back ? back.scroll : 0;
     if (mobile && isMobileLayout()) $('#workspace').scrollIntoView({ block: 'start' });
     if (focusName) $('.ficha-name').focus({ preventScroll: true });
     syncURL();
@@ -1515,7 +1525,7 @@ function compatTable(items, { lk, p }, asPrincipal) {
       const name = state.nameByCode.get(code) || '';
       return {
         cells: [
-          `${procLink(code)}<span class="sub-line strong">${esc(display(name))}</span>`,
+          `${procLink(code)}<span class="sub-line strong">${habMark(code)}${esc(display(name))}</span>`,
           `${esc(registroLabel(lk, regPrincipal))} <span aria-label="para">→</span> ${esc(registroLabel(lk, regCompativel))}`,
           compatBadge(tipo, lk),
           compatQuantity(qt),
@@ -1559,9 +1569,17 @@ function setupDetailEvents() {
       // Ctrl/Cmd/Shift/Alt-click keep the browser's behaviour (new tab or window).
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
       event.preventDefault();
-      openLinkedProcedure(target.dataset.proc);
+      const { ctx, activeTab: tab, activeSub } = state.detail;
+      const tabLabel = state.detail.tabs.find((t) => t.id === tab)?.label || '';
+      openLinkedProcedure(target.dataset.proc, { kind: 'proc', code: ctx.p.codigo, tab, tabLabel, sub: { ...activeSub }, scroll: $('#detail-panel').scrollTop });
     }
     else if (target.dataset.action === 'copy') copyCode(target.dataset.code);
+    else if (target.dataset.action === 'trail') goBackTrail();
+    else if (target.dataset.action === 'nohab') {
+      const note = $('#nohab-note');
+      note.hidden = !note.hidden;
+      target.setAttribute('aria-expanded', String(!note.hidden));
+    }
     else if (target.dataset.action === 'back') {
       setMobileDetail(false);
       $(`.proc-row[data-code="${state.selected}"]`)?.focus();
@@ -1849,7 +1867,7 @@ const reportState = {
 
 function renderReportNav() {
   $('#report-count').textContent = String(REPORTS.length);
-  $('#reports-button').onclick = () => openReports(null);
+  $('#reports-button').onclick = () => { trail.length = 0; openReports(null); };
 }
 
 function renderReportCatalog() {
@@ -2144,7 +2162,7 @@ function renderReportTable() {
     return;
   }
 
-  const procCells = (r) => `<td class="mono col-code">${procLink(r.code)}</td><td>${esc(display(r.name))}</td>`;
+  const procCells = (r) => `<td class="mono col-code">${procLink(r.code)}</td><td>${habMark(r.code)}${esc(display(r.name))}</td>`;
   let head;
   let body = '';
   if (groupBy === 'proc' && !def.perProcedure) {
@@ -2158,7 +2176,7 @@ function renderReportTable() {
         current = r.code;
         alt = false;
         const total = totals.get(r.code);
-        body += `<tr class="group-row"><th scope="rowgroup" colspan="${def.cols.length}">${procLink(r.code)} <span class="group-row-name">${esc(display(r.name))}</span> <span class="group-row-count">${plural(total, 'vínculo', 'vínculos')}</span></th></tr>`;
+        body += `<tr class="group-row"><th scope="rowgroup" colspan="${def.cols.length}">${procLink(r.code)} <span class="group-row-name">${habMark(r.code)}${esc(display(r.name))}</span> <span class="group-row-count">${plural(total, 'vínculo', 'vínculos')}</span></th></tr>`;
       }
       body += `<tr${alt ? ' class="alt"' : ''}>${r.cells.map(reportCell).join('')}</tr>`;
       alt = !alt;
@@ -2463,8 +2481,9 @@ function setupReports() {
     const link = event.target.closest('[data-proc]');
     if (!link) return;
     event.preventDefault();
+    const from = { kind: 'report', id: reportState.def?.id ?? null, title: reportState.def?.title || 'Relatórios', facets: reportState.facets, scroll: window.scrollY };
     closeReports();
-    openLinkedProcedure(link.dataset.proc);
+    openLinkedProcedure(link.dataset.proc, from);
   });
 }
 
@@ -2498,6 +2517,7 @@ function renderSidebar() {
     </button>`).join('');
   $$('#group-nav .group-button').forEach((button) => {
     button.onclick = () => {
+      trail.length = 0;
       closeReports();
       $('#group').value = button.dataset.group;
       updateSubgroups();
@@ -2539,14 +2559,14 @@ function setupControls() {
   $('#form').onchange = () => filter();
   $('#search').addEventListener('input', () => filter());
   $('#reset').onclick = reset;
-  $('#all-groups').onclick = () => { closeReports(); reset(); };
+  $('#all-groups').onclick = () => { trail.length = 0; closeReports(); reset(); };
   for (const kind of ['CID', 'CBO']) {
     $(`#${kind.toLowerCase()}`).addEventListener('input', () => { relationSuggestions(kind); filter(); });
   }
 
   $('#results').addEventListener('click', (event) => {
     const row = event.target.closest('.proc-row');
-    if (row) select(row.dataset.code);
+    if (row) { trail.length = 0; select(row.dataset.code); }
   });
   $('#prev').onclick = () => { if (state.page > 0) { state.page -= 1; renderList(); } };
   $('#next').onclick = () => {
@@ -2690,6 +2710,7 @@ function renderNews() {
         <div><strong>Nota Técnica ${esc(d.nota.orgao)} nº ${esc(d.nota.numero)} de ${esc(d.nota.data)}</strong>
           <span>Documento oficial que acompanha a competência e informa as portarias.</span></div>
         <a class="report-back" href="./${esc(d.nota.caminho)}" target="_blank" rel="noopener">${icon('file')}<span>Abrir nota técnica (PDF)</span></a>
+        <a class="report-back" href="./data/novidades/${esc(d.competencia)}.pdf" target="_blank" rel="noopener">${icon('report')}<span>Relatório das mudanças (PDF)</span></a>
         <span class="news-check ${divergences ? 'warn' : 'ok'}">${divergences ? `${plural(divergences, 'divergência', 'divergências')} entre nota e base` : 'Nota e base conferem'}</span>
       </div>`
     : '<div class="news-note"><span>Sem nota técnica cadastrada para esta competência: as mudanças vêm só da comparação entre as bases.</span></div>';
@@ -2711,7 +2732,7 @@ function portariaCell(list, extra = '') {
 }
 
 const newsProcCell = (code, name, exists = true) =>
-  `<td class="mono col-code">${exists ? procLink(code) : esc(maskProcedure(code))}</td><td>${esc(display(name))}</td>`;
+  `<td class="mono col-code">${exists ? procLink(code) : esc(maskProcedure(code))}</td><td>${exists ? habMark(code) : ''}${esc(display(name))}</td>`;
 
 /** One changed field as readable text: "Serviço Ambulatorial (SA): 10,00 → 12,00". */
 function changeValue(kind, v) {
@@ -2790,7 +2811,7 @@ function newsRows() {
         head: ['Situação', 'Principal', 'Compatível', 'Registro', 'Tipo', 'Qtd.', 'Portaria'],
         rows: d.compatibilidades.map((c) => {
           const [p, o, regP, regC, tipo, qt] = c.par;
-          const cell = (code) => `${state.nameByCode.has(code) ? procLink(code) : esc(maskProcedure(code))}<span class="sub-line">${esc(display(state.nameByCode.get(code) || nameFromNews(code)))}</span>`;
+          const cell = (code) => `${state.nameByCode.has(code) ? procLink(code) : esc(maskProcedure(code))}<span class="sub-line">${habMark(code)}${esc(display(state.nameByCode.get(code) || nameFromNews(code)))}</span>`;
           const extra = c.decorrente_de ? `<span class="sub-line">decorrente da revogação de ${esc(maskProcedure(c.decorrente_de))}</span>` : '';
           return {
             html: `<td><span class="badge ${c.situacao === 'incluida' ? 'badge-ok' : 'badge-excl'}">${c.situacao === 'incluida' ? 'Incluída' : 'Removida'}</span></td>
@@ -2841,7 +2862,7 @@ async function downloadNewsCSV() {
 }
 
 async function setupNews() {
-  $('#news-button').onclick = () => openNews(null);
+  $('#news-button').onclick = () => { trail.length = 0; openNews(null); };
   $('#news-back').onclick = closeReports;
   $('#news-select').onchange = () => openNews($('#news-select').value);
   $('#news-tabs').addEventListener('click', (event) => {
@@ -2857,8 +2878,9 @@ async function setupNews() {
     const link = event.target.closest('[data-proc]');
     if (!link) return;
     event.preventDefault();
+    const from = { kind: 'news', comp: newsState.comp, tab: newsState.tab, scroll: window.scrollY };
     closeReports();
-    openLinkedProcedure(link.dataset.proc);
+    openLinkedProcedure(link.dataset.proc, from);
   });
   try {
     const index = await loadNewsIndex();
@@ -2866,6 +2888,98 @@ async function setupNews() {
   } catch {
     $('#news-button').hidden = true;   // no novidades published yet
   }
+}
+
+// ---------------------------------------------------------------------------
+// 13. Habilitações do estabelecimento (CNES)
+// ---------------------------------------------------------------------------
+//
+// data/estabelecimento.json (scripts/export_estabelecimento.py) lists the
+// procedures whose habilitação options the establishment does not hold. The
+// rule and the habilitação names come from the SIGTAP base; only the
+// establishment's own habilitações come from its CNES ficha (fontes/cnes).
+
+const hab = { data: null, lk: null };
+
+async function loadEstabelecimento() {
+  try {
+    [hab.data, hab.lk] = await Promise.all([fetchJSON('./data/estabelecimento.json'), loadLookups()]);
+  } catch {
+    hab.data = null;   // no profile published: no marks
+  }
+}
+
+/** Each way to meet the requirement: a single habilitação, or a group (all of it). */
+function habOptions(code, named) {
+  const s = hab.data?.sem_habilitacao[code];
+  if (!s) return null;
+  const has = new Set(hab.data.habilitacoes);
+  const one = (h) => (named ? `${maskHabilitacao(h)} ${display(hab.lk?.habilitacao[h] || '')}`.trim() : maskHabilitacao(h));
+  return [
+    ...s.h.map((h) => one(h)),
+    ...s.g.map(([, hs]) => `${hs.map(one).join(' e ')}${named ? ` (falta ${hs.filter((h) => !has.has(h)).map(maskHabilitacao).join(', ')})` : ''}`),
+  ];
+}
+
+function habTitle(code) {
+  const options = habOptions(code, false);
+  if (!options) return '';
+  const shown = options.length > 6 ? `${options.slice(0, 6).join(', ')} e mais ${options.length - 6}` : options.join(', ');
+  return `Sem habilitação no CNES ${hab.data.cnes}. Exige ${options.length > 1 ? 'uma destas: ' : ''}${shown}`;
+}
+
+/** Small red ⊗ next to a name; hover shows what is missing. */
+function habMark(code) {
+  const title = habTitle(code);
+  return title ? `<span class="nohab" role="img" aria-label="${esc(title)}" title="${esc(title)}">${icon('nohab')}</span>` : '';
+}
+
+/** In the ficha the mark is a button: a click shows the habilitações by name. */
+function habButton(code) {
+  const title = habTitle(code);
+  return title ? ` <button type="button" class="nohab nohab-button" data-action="nohab" aria-expanded="false" aria-controls="nohab-note" title="${esc(title)}" aria-label="Sem habilitação: ver detalhes">${icon('nohab')}</button>` : '';
+}
+
+function habNote(code) {
+  const options = habOptions(code, true);
+  if (!options) return '';
+  return `<div class="nohab-note" id="nohab-note" hidden>
+      <strong>Sem habilitação</strong>: o estabelecimento (CNES ${esc(hab.data.cnes)}) não tem ${options.length > 1 ? 'nenhuma das opções exigidas' : 'a habilitação exigida'}.
+      <ul>${options.map((o) => `<li>${esc(o)}</li>`).join('')}</ul>
+      <span class="sub-line">Habilitações do estabelecimento conforme ficha do CNES de ${esc(hab.data.data_ficha)}; exigências da base SIGTAP. A habilitação é um dos critérios de faturamento, não o único.</span>
+    </div>`;
+}
+
+// ---------------------------------------------------------------------------
+// 14. "Voltar": back to where a linked procedure was opened from
+// ---------------------------------------------------------------------------
+
+const trail = [];   // { kind: 'proc' | 'news' | 'report', ... }, newest last
+
+function trailLabel(e) {
+  if (e.kind === 'proc') return `Voltar para ${maskProcedure(e.code)}${e.tabLabel ? ` (${e.tabLabel.replace(/<[^>]*>/g, '')})` : ''}`;
+  if (e.kind === 'news') return `Voltar às Novidades ${compLabel(e.comp)}`;
+  return `Voltar ao relatório ${e.title}`;
+}
+
+async function goBackTrail() {
+  const e = trail.pop();
+  if (!e) return;
+  if (e.kind === 'proc') {
+    state.restore = { code: e.code, tab: e.tab, sub: e.sub, scroll: e.scroll };
+    if (!state.filtered.some((p) => p[0] === e.code)) resetFilters();
+    filter({ preferred: e.code, mobile: isMobileLayout(), focusName: true });
+    return;
+  }
+  trail.length = 0;   // Novidades and Relatórios are where a trail starts
+  if (e.kind === 'news') {
+    newsState.tab = e.tab;
+    await openNews(e.comp);
+  } else {
+    openReports(e.id);
+    if (e.id) { reportState.facets = e.facets; renderReportTable(); }
+  }
+  window.scrollTo({ top: e.scroll });
 }
 
 async function init() {
@@ -2894,6 +3008,7 @@ async function init() {
   setupSidebarSections();
   setupReports();
   setupNews();
+  await loadEstabelecimento();
   setupControls();
   setupSourceDialog();
   setupRelationBrowser();

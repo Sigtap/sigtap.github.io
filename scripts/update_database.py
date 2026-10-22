@@ -43,6 +43,12 @@ with tempfile.TemporaryDirectory() as folder:
         subprocess.run(command, check=True)
     elif (ROOT/'data/novidades').exists():
         shutil.copytree(ROOT/'data/novidades', staging/'novidades')   # same competência re-exported: keep what was published
+    # Habilitações do estabelecimento (fontes/cnes/<CNES>.json, from parse_cnes_habilitacoes.py).
+    for ficha in sorted((ROOT/'fontes/cnes').glob('[0-9]*.json'))[:1]:
+        subprocess.run([sys.executable, str(ROOT/'scripts/export_estabelecimento.py'), '--data', str(staging), '--cnes', str(ficha)], check=True)
+    # PDF report of the competência's changes, organised by the Nota Técnica (data/novidades/<AAAAMM>.pdf).
+    if comp_new > comp_old and (notas/f'{comp_new}.json').exists():
+        subprocess.run([sys.executable, str(ROOT/'scripts/relatorio_competencia.py'), '--data', str(staging), '--competencia', comp_new], check=True)
     backup = ROOT/'data-backup'
     if backup.exists():
         sys.exit('data-backup já existe. Preserve ou renomeie essa pasta antes de atualizar novamente.')

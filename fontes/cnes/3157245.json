@@ -1,0 +1,261 @@
+{
+ "cnes": "3157245",
+ "nome_fantasia": "HOSPITAL UNIV PROFESSOR POLYDORO ERNANI DE SAO",
+ "data_ficha": "22/10/2026",
+ "arquivo": "ficha_cnes_3157245_2026-10-22.pdf",
+ "sha256": "012c973a7f8a79b0bc6bb744cef3f13adf18c4d2ca16f89165b9821008146a50",
+ "habilitacoes": [
+  {
+   "codigo": "0101",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0202",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200710",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0305",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201712",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0506",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201304",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0801",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200603",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0805",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200503",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0806",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201107",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0901",
+   "origem": "LOCAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0902",
+   "origem": "LOCAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0903",
+   "origem": "LOCAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0904",
+   "origem": "LOCAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0906",
+   "origem": "LOCAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "0907",
+   "origem": "LOCAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1101",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1102",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200605",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1202",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201111",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1404",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1416",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201902",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1420",
+   "origem": "NACIONAL",
+   "competencia_inicial": "202508",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1504",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201811",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1505",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201811",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1506",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201902",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1515",
+   "origem": "NACIONAL",
+   "competencia_inicial": "202603",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1708",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200709",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1901",
+   "origem": "LOCAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "1902",
+   "origem": "LOCAL",
+   "competencia_inicial": "199709",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2205",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201401",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2302",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200910",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2304",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200909",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2407",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200407",
+   "competencia_final": "202709"
+  },
+  {
+   "codigo": "2409",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201506",
+   "competencia_final": "202809"
+  },
+  {
+   "codigo": "2420",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201012",
+   "competencia_final": "202809"
+  },
+  {
+   "codigo": "2424",
+   "origem": "NACIONAL",
+   "competencia_inicial": "202010",
+   "competencia_final": "202809"
+  },
+  {
+   "codigo": "2451",
+   "origem": "NACIONAL",
+   "competencia_inicial": "202309",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2601",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2610",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201710",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2702",
+   "origem": "NACIONAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2802",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201807",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2901",
+   "origem": "LOCAL",
+   "competencia_inicial": "200407",
+   "competencia_final": null
+  },
+  {
+   "codigo": "2902",
+   "origem": "LOCAL",
+   "competencia_inicial": "202312",
+   "competencia_final": null
+  },
+  {
+   "codigo": "3202",
+   "origem": "NACIONAL",
+   "competencia_inicial": "201409",
+   "competencia_final": null
+  },
+  {
+   "codigo": "3801",
+   "origem": "LOCAL",
+   "competencia_inicial": "202511",
+   "competencia_final": null
+  }
+ ]
+}
