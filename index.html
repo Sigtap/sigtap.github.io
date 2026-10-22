@@ -35,6 +35,9 @@
       </nav>
     </div>
 
+    <button type="button" class="reports-button news-button" id="news-button" aria-pressed="false">
+      <span data-icon="file"></span><span class="section-title">Novidades</span><span id="news-meta" class="section-meta"></span>
+    </button>
     <button type="button" class="reports-button" id="reports-button" aria-pressed="false">
       <span data-icon="report"></span><span class="section-title">Relatórios</span><span id="report-count" class="section-meta"></span>
     </button>
@@ -150,6 +153,32 @@
           </div>
         </section>
       </div>
+    </section>
+
+    <section class="reports-view news-view" id="news-view" aria-labelledby="news-title" hidden>
+      <header class="report-head">
+        <div>
+          <p class="eyebrow">Novidades da competência</p>
+          <h2 id="news-title" tabindex="-1">Novidades</h2>
+          <p id="news-desc" class="report-desc"></p>
+        </div>
+        <div class="report-head-actions">
+          <label class="news-select-label" id="news-select-wrap" hidden>Competência
+            <select id="news-select"></select>
+          </label>
+          <button type="button" class="report-back" id="news-back"><span data-icon="left"></span><span>Voltar ao explorador</span></button>
+        </div>
+      </header>
+      <div id="news-source" class="news-source"></div>
+      <div class="news-tabs" role="tablist" aria-label="Tipos de mudança" id="news-tabs"></div>
+      <div class="report-bar">
+        <input id="news-filter" class="table-filter" type="search" placeholder="Filtrar por código, nome ou portaria…" aria-label="Filtrar novidades" autocomplete="off">
+        <div class="report-actions">
+          <button type="button" class="report-copy" id="news-csv"><span data-icon="file"></span><span>Baixar CSV (Excel)</span></button>
+        </div>
+      </div>
+      <p id="news-count" class="report-legend" role="status"></p>
+      <div id="news-table" class="report-table"></div>
     </section>
 
     <section class="reports-view" id="reports-view" aria-labelledby="report-title" hidden>

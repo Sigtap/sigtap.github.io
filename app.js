@@ -1485,7 +1485,7 @@ function tussSections({ tabsData }) {
 function compatBadge(tipo, lk) {
   const label = lk.tipo_compatibilidade[String(tipo)];
   return label
-    ? `<span class="badge badge-ok">${esc(label)}</span>`
+    ? `<span class="badge ${String(tipo) === '2' ? 'badge-excl' : 'badge-ok'}">${esc(label)}</span>`
     : `<span class="badge" title="Rótulo do tipo ${tipo} não confirmado na base">Tipo ${tipo}</span>`;
 }
 
@@ -1501,7 +1501,7 @@ function compatQuantity(qt) {
 function compatTable(items, { lk, p }, asPrincipal) {
   const self = maskProcedure(p.codigo);
   const caption = `Pares cadastrados com ${self} como ${asPrincipal ? 'principal' : 'compatível'} (rl_procedimento_compativel).
-    Só o tipo 1 é confirmado como “Compatível”; os tipos 2 a 5 não têm rótulo confirmado e podem ser restrições.`;
+    Tipo 1 = Compatível (tela do SIGTAP); tipo 2 = Excludente (Nota Técnica CGSI nº 10/2026). Os tipos 3 a 5 ainda não têm rótulo confirmado.`;
   return dataTable({
     caption,
     tableClass: 'compat-table stack-table',
@@ -1873,6 +1873,8 @@ function markActiveNav(open) {
 function openReports(id) {
   const def = REPORTS.find((r) => r.id === id) || null;
   $('.explorer').hidden = true;
+  $('#news-view').hidden = true;
+  markNewsNav(false);
   $('#reports-view').hidden = false;
   $('#all-groups').classList.remove('active');
   $$('.group-button').forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
@@ -1905,11 +1907,14 @@ function openReports(id) {
   window.scrollTo({ top: 0 });
 }
 
+/** Back to the explorer from Relatórios or Novidades. */
 function closeReports() {
-  if ($('#reports-view').hidden) return;
+  if ($('#reports-view').hidden && $('#news-view').hidden) return;
   $('#reports-view').hidden = true;
+  $('#news-view').hidden = true;
   $('.explorer').hidden = false;
   markActiveNav(false);
+  markNewsNav(false);
   reportState.def = null;
   syncURL();
 }
@@ -2572,6 +2577,12 @@ function restoreFromURL() {
   $('#form').value = url.get('f') || '';
   const tab = url.get('aba');
   if (tab && TAB_BUILDERS.some(([id]) => id === tab)) settings.lastTab = tab;
+  const news = url.get('novidades');
+  if (news) {
+    filter();
+    openNews(news);
+    return;
+  }
   const report = url.get('relatorio');
   if (report) {
     filter();
@@ -2609,6 +2620,254 @@ function showStartupError(error) {
   $('#group-nav').textContent = 'Base indisponível';
 }
 
+// ---------------------------------------------------------------------------
+// 12. Novidades da competência
+// ---------------------------------------------------------------------------
+//
+// data/novidades/<AAAAMM>.json is built by scripts/build_novidades.py from the
+// previous and the current export (so every change comes from the base); the
+// portarias come from the competência's Nota Técnica (fontes/notas-tecnicas).
+
+const NEWS_TABS = [
+  ['alterados', 'Alterados'],
+  ['novos', 'Novos'],
+  ['revogados', 'Revogados'],
+  ['compatibilidades', 'Compatibilidades'],
+  ['conferencia', 'Conferência nota × base'],
+];
+
+const newsState = { index: null, data: null, tab: 'alterados', comp: null };
+const loadNewsIndex = loadOnce('./data/novidades/index.json');
+
+function markNewsNav(open) {
+  $('#news-button').classList.toggle('active', open);
+  $('#news-button').setAttribute('aria-pressed', String(open));
+}
+
+const compLabel = (c) => `${c.slice(4)}/${c.slice(0, 4)}`;
+
+async function openNews(comp) {
+  $('.explorer').hidden = true;
+  $('#reports-view').hidden = true;
+  markActiveNav(false);
+  $('#news-view').hidden = false;
+  $('#all-groups').classList.remove('active');
+  $$('.group-button').forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+  markNewsNav(true);
+  $('#news-table').innerHTML = '<p class="empty-note">Carregando novidades…</p>';
+  try {
+    newsState.index = await loadNewsIndex();
+    const target = comp && newsState.index.some((e) => e.competencia === comp) ? comp : newsState.index[0]?.competencia;
+    if (!target) throw new Error('sem novidades');
+    const [data, lookups, catalog] = await Promise.all([fetchJSON(`./data/novidades/${target}.json`), loadLookups(), loadCatalog()]);
+    newsState.data = data;
+    newsState.lk = lookups;
+    newsState.comp = target;
+  } catch {
+    $('#news-table').innerHTML = '<p class="empty-note">Não há novidades publicadas para esta base.</p>';
+    return;
+  }
+  try { history.replaceState(null, '', `${location.pathname}?novidades=${newsState.comp}`); } catch { /* sandboxed */ }
+  renderNews();
+  $('#news-title').focus({ preventScroll: true });
+  window.scrollTo({ top: 0 });
+}
+
+function renderNews() {
+  const d = newsState.data;
+  const r = d.resumo;
+  $('#news-title').textContent = `Novidades da competência ${compLabel(d.competencia)}`;
+  $('#news-desc').textContent = `Tudo o que mudou na base SIGTAP de ${compLabel(d.anterior)} para ${compLabel(d.competencia)}, procedimento por procedimento. A portaria de cada mudança vem da nota técnica da competência.`;
+  const many = newsState.index.length > 1;
+  $('#news-select-wrap').hidden = !many;
+  if (many) {
+    $('#news-select').innerHTML = newsState.index.map((e) => `<option value="${e.competencia}"${e.competencia === d.competencia ? ' selected' : ''}>${compLabel(e.competencia)}</option>`).join('');
+  }
+  const conf = d.conferencia || [];
+  const divergences = conf.reduce((n, c) => n + c.so_na_base.length + c.so_na_nota.length, 0);
+  $('#news-source').innerHTML = d.nota
+    ? `<div class="news-note">
+        <div><strong>Nota Técnica ${esc(d.nota.orgao)} nº ${esc(d.nota.numero)} de ${esc(d.nota.data)}</strong>
+          <span>Documento oficial que acompanha a competência e informa as portarias.</span></div>
+        <a class="report-back" href="./${esc(d.nota.caminho)}" target="_blank" rel="noopener">${icon('file')}<span>Abrir nota técnica (PDF)</span></a>
+        <span class="news-check ${divergences ? 'warn' : 'ok'}">${divergences ? `${plural(divergences, 'divergência', 'divergências')} entre nota e base` : 'Nota e base conferem'}</span>
+      </div>`
+    : '<div class="news-note"><span>Sem nota técnica cadastrada para esta competência: as mudanças vêm só da comparação entre as bases.</span></div>';
+  const counts = {
+    alterados: r.alterados, novos: r.novos, revogados: r.revogados,
+    compatibilidades: `+${fmt(r.compat_incluidas)} / −${fmt(r.compat_removidas)}`,
+    conferencia: d.conferencia ? (divergences ? fmt(divergences) : 'ok') : '—',
+  };
+  $('#news-tabs').innerHTML = NEWS_TABS.map(([id, label]) => `<button type="button" role="tab" class="news-tab" data-news-tab="${id}" aria-selected="${id === newsState.tab}">
+      <span>${label}</span><span class="count">${typeof counts[id] === 'number' ? fmt(counts[id]) : counts[id]}</span></button>`).join('');
+  renderNewsTable();
+}
+
+function portariaCell(list, extra = '') {
+  const items = (Array.isArray(list) ? list : [list]).filter(Boolean);
+  return items.length
+    ? items.map((p) => `<span class="portaria">${esc(p)}</span>`).join('') + extra
+    : '<span class="empty" title="A nota técnica não lista esta mudança">Sem item na nota</span>';
+}
+
+const newsProcCell = (code, name, exists = true) =>
+  `<td class="mono col-code">${exists ? procLink(code) : esc(maskProcedure(code))}</td><td>${esc(display(name))}</td>`;
+
+/** One changed field as readable text: "Serviço Ambulatorial (SA): 10,00 → 12,00". */
+function changeValue(kind, v) {
+  const lk = newsState.lk;
+  if (v == null || v === '') return '—';
+  switch (kind) {
+    case 'money': return moneyFormat.format(v);
+    case 'complexidade': return lk.complexidade[v] || v;
+    case 'financiamento': return lk.financiamento[v] ? `${v} - ${lk.financiamento[v]}` : v;
+    case 'sexo': return lk.sexo[v] || v;
+    case 'idade': return v === 9999 ? 'Não se aplica' : formatAge(v);
+    case 'quantidade': return v === 9999 ? 'Sem limite (9999)' : fmt(v);
+    case 'dias': return plural(v, 'dia', 'dias');
+    case 'int': return fmt(v);
+    case 'rubrica': return lk.rubrica[v] ? `${v} - ${lk.rubrica[v]}` : v;
+    default: return display(v);
+  }
+}
+
+function tabItemText(tab, item) {
+  const lk = newsState.lk;
+  switch (tab) {
+    case 'leito': return `${item} - ${lk.tipo_leito[item] || ''}`;
+    case 'renases': return `${item} - ${lk.renases[item] || ''}`;
+    case 'redes': return `${item} - ${(lk.componente_rede[item] || [''])[0]}`;
+    case 'incremento': return `${maskHabilitacao(item[0])} - ${lk.habilitacao[item[0]] || ''} (SH ${item[1]}%, SA ${item[2]}%, SP ${item[3]}%)`;
+    case 'origem_sia_sih': return `${lk.tipo_sia_sih[item[0]] || item[0]} ${item[1]} - ${item[2]}`;
+    case 'grupo_habilitacao': return `Grupo ${item[0]}: ${item[1].map(maskHabilitacao).join(', ')}`;
+    default: return Array.isArray(item) ? item.join(' - ') : String(item);
+  }
+}
+
+function changeLines(m) {
+  if (m.tipo === 'descricao') {
+    return `<li><strong>${esc(m.campo)}</strong> alterada
+      <details class="news-desc"><summary>ver antes e depois</summary>
+        <p><b>Antes:</b> ${esc(display(cleanDescription(m.antes || '')) || '—')}</p>
+        <p><b>Depois:</b> ${esc(display(cleanDescription(m.depois || '')) || '—')}</p></details></li>`;
+  }
+  if (m.tipo === 'lista' || m.tipo === 'tab') {
+    const text = (item) => (m.tipo === 'lista'
+      ? `${m.relacao === 'HABILITACAO' ? maskHabilitacao(item[0]) : item[0]} - ${display(item[1] || '')}${m.relacao === 'CID' && item[2] ? ` (${item[2] === 'CID principal' ? 'principal' : 'secundário'})` : ''}`
+      : tabItemText(m.tab, item));
+    return `<li><strong>${esc(m.campo)}</strong><ul class="news-diff">
+      ${m.incluidos.map((i) => `<li class="add"><span aria-label="incluído">+</span> ${esc(text(i))}</li>`).join('')}
+      ${m.removidos.map((i) => `<li class="del"><span aria-label="removido">−</span> ${esc(text(i))}</li>`).join('')}</ul></li>`;
+  }
+  return `<li><strong>${esc(m.campo)}:</strong> <span class="before">${esc(changeValue(m.tipo, m.antes))}</span> → <span class="after">${esc(changeValue(m.tipo, m.depois))}</span></li>`;
+}
+
+/** Rows of the active tab: { html, csv: [...], search } */
+function newsRows() {
+  const d = newsState.data;
+  const lk = newsState.lk;
+  switch (newsState.tab) {
+    case 'novos':
+      return {
+        head: ['Código', 'Procedimento', 'Portaria'],
+        rows: d.novos.map((n) => ({ html: `${newsProcCell(n.codigo, n.nome)}<td>${portariaCell(n.portarias)}</td>`, csv: [maskProcedure(n.codigo), display(n.nome), n.portarias.join('; ')] })),
+      };
+    case 'revogados':
+      return {
+        head: ['Código', 'Procedimento', 'Portaria'],
+        rows: d.revogados.map((n) => ({ html: `${newsProcCell(n.codigo, n.nome, false)}<td>${portariaCell(n.portarias)}</td>`, csv: [maskProcedure(n.codigo), display(n.nome), n.portarias.join('; ')] })),
+      };
+    case 'alterados':
+      return {
+        head: ['Código', 'Procedimento', 'O que mudou', 'Portaria'],
+        rows: d.alterados.map((a) => ({
+          html: `${newsProcCell(a.codigo, a.nome)}<td><ul class="news-changes">${a.mudancas.map(changeLines).join('')}</ul></td><td>${portariaCell(a.portarias)}</td>`,
+          csv: [maskProcedure(a.codigo), display(a.nome), a.mudancas.map((m) => m.campo).join('; '), a.portarias.join('; ')],
+        })),
+      };
+    case 'compatibilidades':
+      return {
+        head: ['Situação', 'Principal', 'Compatível', 'Registro', 'Tipo', 'Qtd.', 'Portaria'],
+        rows: d.compatibilidades.map((c) => {
+          const [p, o, regP, regC, tipo, qt] = c.par;
+          const cell = (code) => `${state.nameByCode.has(code) ? procLink(code) : esc(maskProcedure(code))}<span class="sub-line">${esc(display(state.nameByCode.get(code) || nameFromNews(code)))}</span>`;
+          const extra = c.decorrente_de ? `<span class="sub-line">decorrente da revogação de ${esc(maskProcedure(c.decorrente_de))}</span>` : '';
+          return {
+            html: `<td><span class="badge ${c.situacao === 'incluida' ? 'badge-ok' : 'badge-excl'}">${c.situacao === 'incluida' ? 'Incluída' : 'Removida'}</span></td>
+              <td>${cell(p)}</td><td>${cell(o)}</td><td>${esc(registroLabel(lk, regP))} → ${esc(registroLabel(lk, regC))}</td>
+              <td>${compatBadge(tipo, lk)}</td><td class="num">${qt == null ? '—' : fmt(qt)}</td><td>${portariaCell(c.portaria, extra)}</td>`,
+            csv: [c.situacao === 'incluida' ? 'Incluída' : 'Removida', maskProcedure(p), maskProcedure(o), `${registroLabel(lk, regP)} -> ${registroLabel(lk, regC)}`,
+              lk.tipo_compatibilidade[String(tipo)] || `Tipo ${tipo}`, qt ?? '', c.portaria || ''],
+          };
+        }),
+      };
+    default: {
+      const conf = d.conferencia || [];
+      return {
+        head: ['Item', 'Só na base', 'Só na nota', 'Observação'],
+        rows: conf.map((c) => ({
+          html: `<td><strong>${esc(c.item)}</strong></td>
+            <td>${c.so_na_base.length ? esc(c.so_na_base.join(', ')) : '<span class="news-check ok">nenhum</span>'}</td>
+            <td>${c.so_na_nota.length ? esc(c.so_na_nota.join(', ')) : '<span class="news-check ok">nenhum</span>'}</td>
+            <td>${esc(c.observacao || '')}</td>`,
+          csv: [c.item, c.so_na_base.join(' '), c.so_na_nota.join(' '), c.observacao || ''],
+        })),
+      };
+    }
+  }
+}
+
+function nameFromNews(code) {
+  return newsState.data.revogados.find((r) => r.codigo === code)?.nome || '';
+}
+
+function renderNewsTable() {
+  $$('[data-news-tab]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.newsTab === newsState.tab)));
+  const { head, rows } = newsRows();
+  const q = terms(norm($('#news-filter').value.trim()));
+  const visible = rows.filter((r) => !q.length || q.every((t) => norm(r.csv.join(' ')).includes(t)));
+  $('#news-count').textContent = `${fmt(visible.length)} de ${fmt(rows.length)} ${rows.length === 1 ? 'item' : 'itens'}`;
+  $('#news-table').innerHTML = visible.length
+    ? `<div class="table-wrap"><table class="data-table report-data news-data"><thead><tr>${head.map((h) => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead>
+        <tbody>${visible.map((r, i) => `<tr${i % 2 ? ' class="alt"' : ''}>${r.html}</tr>`).join('')}</tbody></table></div>`
+    : '<p class="empty-note">Nada nesta lista com esse filtro.</p>';
+}
+
+async function downloadNewsCSV() {
+  const { head, rows } = newsRows();
+  const cell = (v) => { const t = String(v ?? ''); return /[";\n\r]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t; };
+  const lines = [head.map(cell).join(';'), ...rows.map((r) => r.csv.map(cell).join(';'))];
+  await saveFile(`sigtap-novidades-${newsState.comp}-${newsState.tab}.csv`, '﻿' + lines.join('\r\n'), 'text/csv;charset=utf-8');
+}
+
+async function setupNews() {
+  $('#news-button').onclick = () => openNews(null);
+  $('#news-back').onclick = closeReports;
+  $('#news-select').onchange = () => openNews($('#news-select').value);
+  $('#news-tabs').addEventListener('click', (event) => {
+    const tab = event.target.closest('[data-news-tab]');
+    if (!tab) return;
+    newsState.tab = tab.dataset.newsTab;
+    renderNewsTable();
+  });
+  let timer;
+  $('#news-filter').addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(renderNewsTable, 200); });
+  $('#news-csv').onclick = downloadNewsCSV;
+  $('#news-table').addEventListener('click', (event) => {
+    const link = event.target.closest('[data-proc]');
+    if (!link) return;
+    event.preventDefault();
+    closeReports();
+    openLinkedProcedure(link.dataset.proc);
+  });
+  try {
+    const index = await loadNewsIndex();
+    if (index[0]) $('#news-meta').textContent = compLabel(index[0].competencia);
+  } catch {
+    $('#news-button').hidden = true;   // no novidades published yet
+  }
+}
+
 async function init() {
   replaceIconPlaceholders();
   applyReadingSettings();
@@ -2634,6 +2893,7 @@ async function init() {
   renderSidebar();
   setupSidebarSections();
   setupReports();
+  setupNews();
   setupControls();
   setupSourceDialog();
   setupRelationBrowser();

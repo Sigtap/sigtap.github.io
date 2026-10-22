@@ -1,6 +1,6 @@
 # Fontes auxiliares
 
-Arquivos externos guardados para conferência. **Nenhuma informação deles aparece no site**, exceto os títulos das famílias CBO na sub-aba "Categoria" da aba CBO, que a base SIGTAP não traz.
+Arquivos externos guardados para conferência. **Nenhuma informação deles aparece no site**, exceto os títulos das famílias CBO na sub-aba "Categoria" da aba CBO, que a base SIGTAP não traz, e as portarias das Notas Técnicas na aba "Novidades".
 
 ## cbo-mte/ — Classificação Brasileira de Ocupações (CBO 2002), Ministério do Trabalho
 
@@ -21,3 +21,13 @@ Uso no site: só `CBO2002 - Familia.csv` (título de cada família de 4 dígitos
 ## cbo-familias-sigtap.csv
 
 Famílias próprias do SUS que não existem no arquivo do MTE, com o título como aparece na tela "Categoria CBO" do SIGTAP (hoje só 2231 - Médicos).
+
+## notas-tecnicas/ — Notas Técnicas CGSI (alterações mensais do SIGTAP)
+
+- `nota_tecnica_cgsi_sigtap_2026_10.pdf`: Nota Técnica CGSI nº 10/2026, de 25/09/2026 (competência 10/2026), sem alteração. SHA-256 `7bc85229acf3b8432210e6559fedf36d5be80753f9c86dc93d74c68c529fc606`.
+- `202610.json`: o que `scripts/parse_nota_tecnica.py` extrai do PDF. Para cada item, guarda a seção (novos, revogados, alterados, compatibilidades novas/revogadas), o código do procedimento e a portaria. Para compatibilidades, guarda também o registro, o tipo e a quantidade como impressos.
+- `LEIA_ME.TXT`: histórico de layout dos arquivos TXT do SIGTAP (2007–2008), só para referência.
+
+Uso no site: só as portarias, na aba "Novidades". As mudanças em si (nomes, valores, vínculos) vêm da comparação entre a base anterior e a nova. Para cada lista, a aba "Conferência nota × base" mostra os itens que estão só na base ou só na nota. Em 10/2026, nota e base conferem.
+
+A nota também confirma o rótulo do tipo 2 de compatibilidade: os pares listados como "(Excludente)", com Qtd 0, são tipo 2 na base. A tela de compatibilidades usa esse rótulo.

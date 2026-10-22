@@ -1,0 +1,2533 @@
+{
+ "numero": "10/2026",
+ "data": "25/09/2026",
+ "orgao": "CGSI",
+ "novos": [
+  {
+   "codigo": "0909010013",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0909010021",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0909010030",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0909010048",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0909010056",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0909010064",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0209040068",
+   "portaria": {
+    "numero": "4936",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0209040076",
+   "portaria": {
+    "numero": "4936",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0211060291",
+   "portaria": {
+    "numero": "4938",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0211060305",
+   "portaria": {
+    "numero": "4938",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0205010067",
+   "portaria": {
+    "numero": "4960",
+    "data": "21/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0211020109",
+   "portaria": {
+    "numero": "4960",
+    "data": "21/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0301040249",
+   "portaria": {
+    "numero": "4960",
+    "data": "21/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0301040257",
+   "portaria": {
+    "numero": "4960",
+    "data": "21/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0804010072",
+   "portaria": {
+    "numero": "4960",
+    "data": "21/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0804020060",
+   "portaria": {
+    "numero": "4960",
+    "data": "21/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0804020078",
+   "portaria": {
+    "numero": "4960",
+    "data": "21/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0410010227",
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  }
+ ],
+ "revogados": [
+  {
+   "codigo": "0410010090",
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0410010219",
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  }
+ ],
+ "alterados": [
+  {
+   "codigo": "0205010032",
+   "portaria": {
+    "numero": "4857",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0211020044",
+   "portaria": {
+    "numero": "4857",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0211020052",
+   "portaria": {
+    "numero": "4857",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501030069",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501030077",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501030093",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501030107",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501050043",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070044",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070052",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070087",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070095",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070109",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070117",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070125",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070133",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0501070141",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505010011",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505010020",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505010038",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505010046",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505010054",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505010062",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505010070",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505010089",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020017",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020025",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020041",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020050",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020068",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020076",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020084",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020092",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020106",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020122",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0505020149",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506020053",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506020061",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506020070",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506020096",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506020100",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506020118",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506020134",
+   "portaria": {
+    "numero": "5050",
+    "data": "05/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010066",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010074",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010082",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010090",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010104",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010112",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010120",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010139",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010147",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010155",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010163",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010171",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010180",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010198",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010201",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010210",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010228",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0506010236",
+   "portaria": {
+    "numero": "4651",
+    "data": "06/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0301040176",
+   "portaria": {
+    "numero": "4834",
+    "data": "02/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0301040184",
+   "portaria": {
+    "numero": "4834",
+    "data": "02/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0202010228",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0202010732",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0202020070",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0202050017",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0202050092",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0205010040",
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0301140014",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010016",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010032",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010040",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010059",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010067",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010075",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010083",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010091",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311010105",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311020020",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311020038",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311020046",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311020054",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311020062",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0311020070",
+   "portaria": {
+    "numero": "4965",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0301010315",
+   "portaria": {
+    "numero": "4964",
+    "data": "28/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0804010056",
+   "portaria": {
+    "numero": "4964",
+    "data": "28/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0804010064",
+   "portaria": {
+    "numero": "4964",
+    "data": "28/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0211020095",
+   "portaria": {
+    "numero": "4960",
+    "data": "21/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0802010121",
+   "portaria": {
+    "numero": "2.902",
+    "data": "26/06/2025",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0802010130",
+   "portaria": {
+    "numero": "2.902",
+    "data": "26/06/2025",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0206030045",
+   "portaria": {
+    "numero": "46944695",
+    "data": "13/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0702080012",
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0702080039",
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0418010013",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418010021",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418010030",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418010048",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418010064",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418010080",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418010099",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418020019",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418020027",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0418020035",
+   "portaria": {
+    "numero": "4610",
+    "data": "03/08/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020125",
+   "portaria": {
+    "numero": "12187",
+    "data": "18/09/2026",
+    "orgao": "GM"
+   }
+  }
+ ],
+ "compat_novas": [
+  {
+   "principal": "0909010013",
+   "compativel": "0202010210",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202010228",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202010430",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202010600",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202010635",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202020380",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202050017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0301010072",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0301010307",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202010210",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202010228",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202010430",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202010627",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202010635",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202020380",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202050017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0301010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0301010072",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0301010307",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0301010315",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010210",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010228",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010384",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010422",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010600",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010627",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010635",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010660",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010694",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010767",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202020380",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202050017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202060276",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0301010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0301010072",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0301010307",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0301010315",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010210",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010228",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010317",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010384",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010422",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010430",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010600",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010627",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010635",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010660",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010694",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010767",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202020380",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202050017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202060276",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0301010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0301010072",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0301010307",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0301010315",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0202010600",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0202020070",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0202020134",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0202020142",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0202020380",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0301010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0301010072",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 3,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0301010307",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 3,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0301010315",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010064",
+   "compativel": "0202010600",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010064",
+   "compativel": "0202020070",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010064",
+   "compativel": "0202020142",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010064",
+   "compativel": "0202020380",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010064",
+   "compativel": "0301010072",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 3,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010064",
+   "compativel": "0301010307",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 3,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202010317",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202010422",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202010627",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202010767",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202030636",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202030890",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202050092",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0202060276",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0205020054",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010013",
+   "compativel": "0211020036",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202010317",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202010422",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202010767",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010021",
+   "compativel": "0202060276",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202010317",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010030",
+   "compativel": "0202050092",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010048",
+   "compativel": "0202010732",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010056",
+   "compativel": "0418010080",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010064",
+   "compativel": "0205010040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0909010064",
+   "compativel": "0418010030",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "4940",
+    "data": "15/09/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0410010227",
+   "compativel": "0410010073",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0416120024",
+   "compativel": "0410010227",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Principal)",
+    "tipo": "Compatível Seq"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0416120032",
+   "compativel": "0410010227",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Principal)",
+    "tipo": "Compatível Seq"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0410010227",
+   "compativel": "0702080012",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Especial)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0410010227",
+   "compativel": "0702080039",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Especial)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  }
+ ],
+ "compat_revogadas": [
+  {
+   "principal": "0410010219",
+   "compativel": "0410010090",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0410010219",
+   "compativel": "0415010012",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0410010219",
+   "compativel": "0415020034",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0410010090",
+   "compativel": "0702080012",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Especial)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0410010090",
+   "compativel": "0702080039",
+   "registro": {
+    "principal": "AIH (Proc. Principal)",
+    "compativel": "AIH (Proc. Especial)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "12254",
+    "data": "30/09/2026",
+    "orgao": "GM"
+   }
+  }
+ ],
+ "competencia": "202610",
+ "arquivo": "nota_tecnica_cgsi_sigtap_2026_10.pdf",
+ "sha256": "7bc85229acf3b8432210e6559fedf36d5be80753f9c86dc93d74c68c529fc606"
+}
