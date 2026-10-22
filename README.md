@@ -21,7 +21,7 @@ Tudo vem do DuckDB, por script, de forma determinística: rodar o fluxo de novo 
 - `scripts/build_novidades.py`: aba "Novidades" (`data/novidades/`). Compara a exportação publicada com a nova, campo a campo: procedimentos novos, revogados e alterados, e compatibilidades incluídas ou removidas.
 - `scripts/parse_nota_tecnica.py`: lê a Nota Técnica da competência (PDF da CGSI) e guarda em `fontes/notas-tecnicas/AAAAMM.json` só o que a base não tem: a portaria de cada mudança. A aba Novidades mostra essa portaria e confere nota × base (itens que aparecem só em uma das duas).
 
-A página só formata (código 04.07.02.017-9, idade em anos, 9999 como "Não se aplica", Total Hospitalar = SH + SP). O modo "Legível" muda apenas maiúsculas e minúsculas; "Original" mostra o texto exato da base. As "Categorias" de CBO são as famílias CBO (4 dígitos) com todas as ocupações vinculadas; os títulos das famílias não estão na base SIGTAP e vêm de `fontes/` (ver `fontes/README.md`); A Nota Técnica é complementar à base: dela vêm só as portarias da aba Novidades e o rótulo do tipo 2 de compatibilidade ("Excludente"), que a base não traz.
+A página só formata (código 04.07.02.017-9, idade em anos, 9999 como "Não se aplica", Total Hospitalar = SH + SP). O modo "Legível" muda apenas maiúsculas e minúsculas; "Original" mostra o texto exato da base. As "Categorias" de CBO são as famílias CBO (4 dígitos) com todas as ocupações vinculadas; os títulos das famílias não estão na base SIGTAP e vêm de `fontes/` (ver `fontes/README.md`). A Nota Técnica é complementar à base: dela vêm só as portarias da aba Novidades e os rótulos dos tipos 2, 4 e 5 de compatibilidade ("Excludente", "Compatível Seq", "Obrigatória"), que a base não traz.
 
 ## Atualizar com outro DuckDB
 

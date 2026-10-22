@@ -30,4 +30,4 @@ Famílias próprias do SUS que não existem no arquivo do MTE, com o título com
 
 Uso no site: só as portarias, na aba "Novidades". As mudanças em si (nomes, valores, vínculos) vêm da comparação entre a base anterior e a nova. Para cada lista, a aba "Conferência nota × base" mostra os itens que estão só na base ou só na nota. Em 10/2026, nota e base conferem.
 
-A nota também confirma o rótulo do tipo 2 de compatibilidade: os pares listados como "(Excludente)", com Qtd 0, são tipo 2 na base. A tela de compatibilidades usa esse rótulo.
+A nota também dá nome a tipos de compatibilidade que a base guarda só como número. Conferido par a par: todo par listado como "(Excludente)" (Qtd 0) é tipo 2 na base, "(Compatível Seq)" é tipo 4 e "(Obrigatória)" é tipo 5. A tela de compatibilidades usa esses rótulos, escritos como na nota. O tipo 3 segue sem rótulo até uma nota trazer um par desse tipo.
