@@ -1501,7 +1501,7 @@ function compatQuantity(qt) {
 function compatTable(items, { lk, p }, asPrincipal) {
   const self = maskProcedure(p.codigo);
   const caption = `Pares cadastrados com ${self} como ${asPrincipal ? 'principal' : 'compatível'} (rl_procedimento_compativel).
-    Tipo 1 = Compatível (tela do SIGTAP); tipo 2 = Excludente (Nota Técnica CGSI nº 10/2026). Os tipos 3 a 5 ainda não têm rótulo confirmado.`;
+    Tipo 1 = Compatível (tela do SIGTAP); tipos 2, 4 e 5 = Excludente, Compatível Seq e Obrigatória (Nota Técnica CGSI nº 10/2026). O tipo 3 ainda não tem rótulo confirmado.`;
   return dataTable({
     caption,
     tableClass: 'compat-table stack-table',

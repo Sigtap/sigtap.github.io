@@ -63,8 +63,9 @@ COMPLEXIDADE = {'0': 'Não se aplica', '1': 'Atenção Básica Complexidade',
 TIPO_SIA_SIH = {'A': 'Ambulatorial', 'H': 'Hospitalar'}
 # Only tipo 1 is confirmed on the SIGTAP screens; the UI shows "Tipo N" for 2-5.
 # TP_COMPATIBILIDADE has no lookup table in the base. 1 = Compatível (SIGTAP screen);
-# 2 = Excludente (Nota Técnica CGSI nº 10/2026: pairs listed as "(Excludente)", Qtd 0, are tipo 2).
-TIPO_COMPATIBILIDADE = {'1': 'Compatível', '2': 'Excludente'}
+# 2, 4 and 5 as named by Nota Técnica CGSI nº 10/2026: every pair it lists as "(Excludente)" is tipo 2,
+# "(Compatível Seq)" tipo 4 and "(Obrigatória)" tipo 5 in the base. 3 has no confirmed label yet.
+TIPO_COMPATIBILIDADE = {'1': 'Compatível', '2': 'Excludente', '4': 'Compatível Seq', '5': 'Obrigatória'}
 
 
 def dump(obj):
