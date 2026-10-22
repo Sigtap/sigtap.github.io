@@ -212,9 +212,9 @@ def main():
     if (previous / 'index.json').exists():
         for e in json.loads((previous / 'index.json').read_text(encoding='utf-8')):
             entries[e['competencia']] = e
-            src = previous / f'{e["competencia"]}.json'
-            if src.exists() and e['competencia'] != comp_new:
-                shutil.copy2(src, out_dir / src.name)
+            for src in (previous / f'{e["competencia"]}.json', previous / f'{e["competencia"]}.pdf'):
+                if src.exists() and e['competencia'] != comp_new:
+                    shutil.copy2(src, out_dir / src.name)
     entries[comp_new] = {'competencia': comp_new, 'anterior': comp_old, 'resumo': result['resumo'],
                          'nota': f"Nota Técnica {nota_meta['orgao']} nº {nota_meta['numero']}" if nota_meta else None}
     index = sorted(entries.values(), key=lambda e: e['competencia'], reverse=True)

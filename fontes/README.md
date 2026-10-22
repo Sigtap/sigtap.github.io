@@ -1,6 +1,6 @@
 # Fontes auxiliares
 
-Arquivos externos guardados para conferência. **Nenhuma informação deles aparece no site**, exceto os títulos das famílias CBO na sub-aba "Categoria" da aba CBO, que a base SIGTAP não traz, e as portarias das Notas Técnicas na aba "Novidades".
+Arquivos externos guardados para conferência. **Nenhuma informação deles aparece no site**, exceto os títulos das famílias CBO na sub-aba "Categoria" da aba CBO, que a base SIGTAP não traz, as portarias das Notas Técnicas na aba "Novidades" e as habilitações do estabelecimento (ficha do CNES), usadas só para marcar os procedimentos sem habilitação.
 
 ## cbo-mte/ — Classificação Brasileira de Ocupações (CBO 2002), Ministério do Trabalho
 
@@ -31,3 +31,10 @@ Famílias próprias do SUS que não existem no arquivo do MTE, com o título com
 Uso no site: só as portarias, na aba "Novidades". As mudanças em si (nomes, valores, vínculos) vêm da comparação entre a base anterior e a nova. Para cada lista, a aba "Conferência nota × base" mostra os itens que estão só na base ou só na nota. Em 10/2026, nota e base conferem.
 
 A nota também dá nome a tipos de compatibilidade que a base guarda só como número. Conferido par a par: todo par listado como "(Excludente)" (Qtd 0) é tipo 2 na base, "(Compatível Seq)" é tipo 4 e "(Obrigatória)" é tipo 5. A tela de compatibilidades usa esses rótulos, escritos como na nota. O tipo 3 segue sem rótulo até uma nota trazer um par desse tipo.
+
+## cnes/ — Ficha do estabelecimento (CNES)
+
+- `ficha_cnes_3157245_2026-10-22.pdf`: ficha do CNES 3157245 (Hospital Universitário Professor Polydoro Ernani de São Thiago), emitida em 22/10/2026, sem alteração.
+- `3157245.json`: o que `scripts/parse_cnes_habilitacoes.py` extrai da ficha: código, origem e competências inicial e final de cada habilitação (42).
+
+Uso no site: só os códigos das habilitações vigentes na competência, cruzados com as exigências da base SIGTAP (`data/estabelecimento.json`). Nomes das habilitações e regras vêm da base.
