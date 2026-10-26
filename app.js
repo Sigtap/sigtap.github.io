@@ -2901,7 +2901,13 @@ async function setupNews() {
 
 const hab = { data: null, lk: null };
 
+// Marks are off while the habilitação rules are being checked (Portaria SAES/MS 3.442/2025
+// waives the check for procedures with only grupo 38 habilitações; group rules to confirm).
+// data/estabelecimento.json is still built; set this to true to show the ⊗ again.
+const SHOW_HAB_MARKS = false;
+
 async function loadEstabelecimento() {
+  if (!SHOW_HAB_MARKS) { hab.data = null; return; }
   try {
     [hab.data, hab.lk] = await Promise.all([fetchJSON('./data/estabelecimento.json'), loadLookups()]);
   } catch {

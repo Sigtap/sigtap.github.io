@@ -112,6 +112,8 @@ def main():
     ap.add_argument('--data', type=Path, default=ROOT / 'data')
     ap.add_argument('--competencia')
     ap.add_argument('--out', type=Path)
+    ap.add_argument('--estabelecimento', action='store_true',
+                    help='marcar os procedimentos sem habilitação no estabelecimento (data/estabelecimento.json)')
     args = ap.parse_args()
 
     comp = args.competencia or load_json(args.data / 'novidades/index.json')[0]['competencia']
@@ -121,8 +123,9 @@ def main():
     nota = load_json(ROOT / f'fontes/notas-tecnicas/{comp}.json')
     lk = load_json(args.data / 'lookups.json')
     procs = load_procs(args.data)
+    # Habilitação marks only on request (--estabelecimento): the rules are still being checked.
     est_path = args.data / 'estabelecimento.json'
-    est = load_json(est_path) if est_path.exists() else None
+    est = load_json(est_path) if args.estabelecimento and est_path.exists() else None
     sem = est['sem_habilitacao'] if est else {}
     f = Fmt(lk)
     out = args.out or args.data / f'novidades/{comp}.pdf'
