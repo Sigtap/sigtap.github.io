@@ -1,5 +1,5 @@
 /*
- * SIGTAP Explorador — ficha legível (protótipo).
+ * SIGTAP Explorador — ficha legível.
  *
  * Sections:
  *   1. Utilities (DOM, escaping, number and code formatting)
@@ -57,6 +57,9 @@ const ICON_PATHS = {
   chevron: '<path d="m6 9 6 6 6-6"/>',
   report: '<path d="M5 3h10l4 4v14H5zM9 12h6M9 16h6M9 8h3"/>',
   nohab: '<circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/>',
+  pin: '<path d="M9 3h6l-1 6 3 3v2H7v-2l3-3z"/><path d="M12 14v7"/>',
+  expand: '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+  shrink: '<path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/>',
 };
 
 function icon(name) {
@@ -427,6 +430,7 @@ function syncURL() {
     if ($(`#${id}`).value) params.set(key, $(`#${id}`).value);
   }
   if (state.selected) params.set('p', state.selected);
+  if (pin.code) params.set('fixo', pin.code);
   if (state.detail && state.detail.activeTab !== 'descricao') params.set('aba', state.detail.activeTab);
   const query = params.toString();
   try {
@@ -523,7 +527,8 @@ function filter({ preferred = null, mobile = false, focusName = false } = {}) {
   // A new search starts on page 1 (keeping the open ficha if it still matches);
   // only an explicit procedure (URL, link) jumps to the page that holds it.
   const keep = preferred || state.selected;
-  state.selected = state.filtered.some((p) => p[0] === keep) ? keep : (state.filtered[0]?.[0] || null);
+  // No ficha opens by itself: only the one the user chose (list, link, URL).
+  state.selected = state.filtered.some((p) => p[0] === keep) ? keep : null;
   const index = preferred ? state.filtered.findIndex((p) => p[0] === state.selected) : 0;
   state.page = index > 0 ? Math.floor(index / PAGE_SIZE) : 0;
 
@@ -539,7 +544,9 @@ function filter({ preferred = null, mobile = false, focusName = false } = {}) {
   } else {
     state.detail = null;
     state.ticket += 1;
-    $('#detail').innerHTML = `<div class="empty-detail">${icon('search')}<h2>Nenhum procedimento encontrado</h2><p>Experimente outro termo ou limpe os filtros para consultar toda a base.</p></div>`;
+    $('#detail').innerHTML = n
+      ? `<div class="empty-detail welcome">${icon('search')}<h2>Escolha um procedimento</h2><p>Busque pelo nome ou código, ou navegue pelos grupos. A ficha abre aqui, ao lado da lista.</p></div>`
+      : `<div class="empty-detail">${icon('search')}<h2>Nenhum procedimento encontrado</h2><p>Experimente outro termo ou limpe os filtros para consultar toda a base.</p></div>`;
   }
   syncURL();
 }
@@ -552,6 +559,7 @@ function updateSidebarState() {
     button.setAttribute('aria-pressed', String(active));
   });
   $('#all-groups').classList.toggle('active', !hasActiveFilters());
+  renderChips();
 }
 
 function resetFilters() {
@@ -572,7 +580,7 @@ function reset() {
 function listRow([code, name], full) {
   const selected = code === state.selected;
   return `<button type="button" class="proc-row${selected ? ' selected' : ''}" data-code="${code}" aria-pressed="${selected}" title="${maskProcedure(code)} ${esc(display(name))}">
-      <span class="proc-code">${maskProcedure(code)}</span>
+      <span class="proc-code">${maskProcedure(code)}${code === pin.code ? `<span class="pin-mark" title="Fixado para comparação">${icon('pin')}</span>` : ''}</span>
       <span class="proc-name${full ? ' full' : ''}">${habMark(code)}${esc(display(name))}</span>
     </button>`;
 }
@@ -743,7 +751,7 @@ function hierarchyNames(code) {
 }
 
 function fieldRow(label, html) {
-  return `<div class="field-row"><dt>${label}</dt><dd>${html}</dd></div>`;
+  return `<div class="field-row" data-cmp="${esc(label)}"><dt>${label}</dt><dd>${html}</dd></div>`;
 }
 
 /** Full-width header: code, copy button and competência on one line, the name below. */
@@ -755,6 +763,8 @@ function renderFichaHeader({ p }) {
       <div class="ficha-code-row">
         <span class="ficha-code" aria-label="Código ${maskProcedure(p.codigo)}">${maskProcedure(p.codigo)}</span>
         <button type="button" class="copy-button" data-action="copy" data-code="${p.codigo}" title="Copiar código (somente números)">${icon('copy')}<span>Copiar código</span></button>
+        <button type="button" class="copy-button pin-button${pin.code === p.codigo ? ' on' : ''}" data-action="pin" title="${pin.code === p.codigo ? 'Este procedimento está fixado' : 'Fixar este procedimento ao lado, para comparar com os próximos'}">${icon('pin')}<span>${pin.code === p.codigo ? 'Fixado' : 'Fixar'}</span></button>
+        ${expandButton()}
         <p class="ficha-meta">Competência ${competenciaLabel()}</p>
       </div>
       <h2 class="ficha-name" tabindex="-1">${esc(display(p.nome))}${habButton(p.codigo)}</h2>
@@ -811,7 +821,7 @@ function renderValores({ p }) {
   const hasHospitalar = p.valor_sh != null || p.valor_sp != null;
   const totalHospitalar = hasHospitalar ? (p.valor_sh || 0) + (p.valor_sp || 0) : null;
   const row = (label, amount, total = false) =>
-    `<div class="money-row${total ? ' total' : ''}"><dt>${label}</dt><dd>${amount}</dd></div>`;
+    `<div class="money-row${total ? ' total' : ''}" data-cmp="${esc(label)}"><dt>${label}</dt><dd>${amount}</dd></div>`;
   return `
     <section class="box box-valores" aria-labelledby="box-valores">
       <h3 class="box-title" id="box-valores">Valores</h3>
@@ -893,6 +903,7 @@ function renderDetail() {
       <p class="legal-note">Vínculos cadastrados não substituem as demais regras.</p>
     </article>`;
   observeTabbar();
+  markDiffs();
 }
 
 /**
@@ -1534,7 +1545,7 @@ function compatTable(items, { lk, p }, asPrincipal) {
       };
     }),
   }) + `<p class="footnote">As exceções de compatibilidade existem na base (rl_excecao_compatibilidade, 5 linhas),
-    mas não são mostradas neste protótipo. Documento de publicação e data de início (“desde”) não estão na base.</p>`;
+    mas não são mostradas aqui. Documento de publicação e data de início (“desde”) não estão na base.</p>`;
 }
 
 function compatSections(ctx) {
@@ -1575,6 +1586,8 @@ function setupDetailEvents() {
     }
     else if (target.dataset.action === 'copy') copyCode(target.dataset.code);
     else if (target.dataset.action === 'trail') goBackTrail();
+    else if (target.dataset.action === 'pin') pinProcedure(state.detail.ctx.p.codigo);
+    else if (target.dataset.action === 'expand') setFichaFull(!document.body.classList.contains('ficha-full'));
     else if (target.dataset.action === 'nohab') {
       const note = $('#nohab-note');
       note.hidden = !note.hidden;
@@ -2519,6 +2532,7 @@ function renderSidebar() {
     button.onclick = () => {
       trail.length = 0;
       closeReports();
+      $('#search').value = '';   // browsing by group starts a new query; the Grupo field keeps it
       $('#group').value = button.dataset.group;
       updateSubgroups();
       filter();
@@ -2698,11 +2712,10 @@ function renderNews() {
   const r = d.resumo;
   $('#news-title').textContent = `Novidades da competência ${compLabel(d.competencia)}`;
   $('#news-desc').textContent = `Tudo o que mudou na base SIGTAP de ${compLabel(d.anterior)} para ${compLabel(d.competencia)}, procedimento por procedimento. A portaria de cada mudança vem da nota técnica da competência.`;
-  const many = newsState.index.length > 1;
-  $('#news-select-wrap').hidden = !many;
-  if (many) {
-    $('#news-select').innerHTML = newsState.index.map((e) => `<option value="${e.competencia}"${e.competencia === d.competencia ? ' selected' : ''}>${compLabel(e.competencia)}</option>`).join('');
-  }
+  // Every published competência (and its Nota Técnica) stays selectable here.
+  $('#news-select-wrap').hidden = false;
+  $('#news-select').disabled = newsState.index.length < 2;
+  $('#news-select').innerHTML = newsState.index.map((e) => `<option value="${e.competencia}"${e.competencia === d.competencia ? ' selected' : ''}>${compLabel(e.competencia)}${e.nota ? ` · ${esc(e.nota)}` : ''}</option>`).join('');
   const conf = d.conferencia || [];
   const divergences = conf.reduce((n, c) => n + c.so_na_base.length + c.so_na_nota.length, 0);
   $('#news-source').innerHTML = d.nota
@@ -2988,8 +3001,210 @@ async function goBackTrail() {
   window.scrollTo({ top: e.scroll });
 }
 
+// ---------------------------------------------------------------------------
+// 15. Layout: filtros em etiquetas, barra lateral recolhível, ficha em tela cheia
+// ---------------------------------------------------------------------------
+
+/** Active filters as removable chips; the grid of fields opens with "Filtros". */
+function renderChips() {
+  const chips = [];
+  const opt = (id) => $(`#${id}`).selectedOptions[0]?.textContent || $(`#${id}`).value;
+  if ($('#group').value) chips.push(['group', `Grupo ${opt('group')}`]);
+  if ($('#subgroup').value) chips.push(['subgroup', `Sub-grupo ${opt('subgroup')}`]);
+  if ($('#form').value) chips.push(['form', `Forma ${opt('form')}`]);
+  if ($('#cid').value) chips.push(['cid', `CID ${$('#cid').value}`]);
+  if ($('#cbo').value) chips.push(['cbo', `CBO ${$('#cbo').value}`]);
+  $('#chip-row').hidden = !chips.length;
+  $('#chip-row').innerHTML = chips.map(([id, label]) =>
+    `<button type="button" class="chip" data-clear="${id}" title="Remover este filtro">${esc(label)} <span aria-hidden="true">×</span></button>`).join('');
+  $('#filter-count').hidden = !chips.length;
+  $('#filter-count').textContent = chips.length;
+}
+
+function setupChips() {
+  $('#filter-toggle').onclick = () => {
+    const open = $('#filter-grid').hidden;
+    $('#filter-grid').hidden = !open;
+    $('#filter-toggle').setAttribute('aria-expanded', String(open));
+  };
+  $('#chip-row').addEventListener('click', (event) => {
+    const chip = event.target.closest('[data-clear]');
+    if (!chip) return;
+    const id = chip.dataset.clear;
+    $(`#${id}`).value = '';
+    if (id === 'group') { updateSubgroups(); }
+    if (id === 'subgroup') { updateForms(); }
+    if (id === 'cid' || id === 'cbo') relationSuggestions(id.toUpperCase());
+    filter();
+  });
+}
+
+const SIDE_KEY = 'sigtap-proto-v2-sidebar';
+
+function setSidebarCollapsed(on, save = true) {
+  document.body.classList.toggle('side-collapsed', on);
+  $('#side-toggle').setAttribute('aria-expanded', String(!on));
+  $('#side-toggle').title = on ? 'Expandir a barra lateral (tecla [ )' : 'Recolher a barra lateral (tecla [ )';
+  $('.side-toggle-icon').textContent = on ? '»' : '«';
+  if (save) { try { localStorage.setItem(SIDE_KEY, on ? '1' : '0'); } catch { /* storage blocked */ } }
+}
+
+/** Full-screen toggle: the symbol only; the name is in the tooltip and for screen readers. */
+function expandButton() {
+  const on = document.body.classList.contains('ficha-full');
+  const label = on ? 'Sair da tela cheia (Esc)' : 'Ficha em tela cheia';
+  return `<button type="button" class="copy-button expand-button" data-action="expand" title="${label}" aria-label="${label}" aria-pressed="${on}">${icon(on ? 'shrink' : 'expand')}</button>`;
+}
+
+function setFichaFull(on) {
+  document.body.classList.toggle('ficha-full', on);
+  const button = $('.expand-button');
+  if (button) button.outerHTML = expandButton();
+  $('#detail-panel').scrollTop = 0;
+}
+
+function setupV2() {
+  let saved = null;
+  try { saved = localStorage.getItem(SIDE_KEY); } catch { /* storage blocked */ }
+  setSidebarCollapsed(saved === '1', false);
+  $('#side-toggle').onclick = () => setSidebarCollapsed(!document.body.classList.contains('side-collapsed'));
+  // In the narrow bar, "Grupos" opens the bar instead of folding the list.
+  $('.section-toggle').addEventListener('click', (event) => {
+    if (!document.body.classList.contains('side-collapsed')) return;
+    event.stopImmediatePropagation();
+    setSidebarCollapsed(false);
+  }, true);
+  document.addEventListener('keydown', (event) => {
+    const typing = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName);
+    if (event.key === '[' && !typing && !document.querySelector('dialog[open]')) {
+      event.preventDefault();
+      setSidebarCollapsed(!document.body.classList.contains('side-collapsed'));
+    }
+    if (event.key === 'Escape' && document.body.classList.contains('ficha-full') && !document.querySelector('dialog[open]')) setFichaFull(false);
+  });
+  // Sticky ficha header: the tab bar sticks right below it.
+  const headObserver = new ResizeObserver((entries) => {
+    document.documentElement.style.setProperty('--fhead-h', `${Math.ceil(entries.at(-1).target.getBoundingClientRect().height)}px`);
+  });
+  new MutationObserver(() => {
+    headObserver.disconnect();
+    const head = $('#detail .ficha-header');
+    if (head) headObserver.observe(head);
+  }).observe($('#detail'), { childList: true });
+  setupChips();
+}
+
+// ---------------------------------------------------------------------------
+// 16. Fixar um procedimento para comparar
+// ---------------------------------------------------------------------------
+//
+// The pin keeps one ficha on screen, beside the one being browsed. Its
+// summary is the same as the ficha's; the relation lists open one by one.
+// Fields that differ from the open ficha get a light mark on both sides.
+
+const pin = { code: null, ctx: null };
+
+async function pinProcedure(code) {
+  if (pin.code === code) return;
+  const [group, catalog, lookups] = await Promise.all([loadGroup(code), loadCatalog(), loadLookups()]);
+  pin.code = code;
+  pin.ctx = buildContext(group[code], catalog, lookups);
+  renderPinned();
+  renderList({ keepScroll: true });
+  if (state.detail) rerenderDetailKeepingScroll();
+  syncURL();
+}
+
+function unpin() {
+  pin.code = null;
+  pin.ctx = null;
+  renderPinned();
+  renderList({ keepScroll: true });
+  if (state.detail) rerenderDetailKeepingScroll();
+  syncURL();
+}
+
+function renderPinned() {
+  const on = Boolean(pin.ctx);
+  document.body.classList.toggle('has-pin', on);
+  $('#pinned-panel').hidden = !on;
+  if (!on) { $('#pinned').innerHTML = ''; return; }
+  const ctx = pin.ctx;
+  const { p } = ctx;
+  const tabs = buildTabs(ctx);
+  const count = (t) => (t.badge?.text ? ` <span class="count">${esc(t.badge.text)}</span>` : '');
+  const relation = (t) => (!t.enabled
+    ? `<div class="pin-rel pin-rel-empty" data-cmp-rel="${t.id}"><span class="summary-like">${esc(t.label)}${count(t) || ' <span class="count">0</span>'}</span></div>`
+    : `
+    <details class="pin-rel" data-cmp-rel="${t.id}">
+      <summary>${esc(t.label)}${count(t)}</summary>
+      ${t.sections.filter((s) => s.count > 0).map((s) => `${t.sections.length > 1 ? `<h4 class="pin-sub">${esc(s.label)}</h4>` : ''}${s.render()}`).join('')}
+    </details>`);
+  $('#pinned').innerHTML = `
+    <article class="ficha pinned-ficha" aria-label="Procedimento fixado">
+      <header class="ficha-header">
+        <div class="ficha-code-row">
+          <span class="pin-label">${icon('pin')} Fixado</span>
+          <span class="ficha-code">${maskProcedure(p.codigo)}</span>
+          <button type="button" class="copy-button" data-pin-action="unpin" title="Desafixar">✕ <span>Desafixar</span></button>
+        </div>
+        <h2 class="ficha-name">${esc(display(p.nome))}${habButton(p.codigo).replace('data-action="nohab"', 'data-pin-action="nohab"').replace('aria-controls="nohab-note"', '')}</h2>
+      </header>
+      <div class="ficha-body">
+        ${renderClassificacao(ctx).replace(/id="box-/g, 'id="pin-box-').replace(/aria-labelledby="box-/g, 'aria-labelledby="pin-box-')}
+        ${renderValores(ctx).replace(/id="box-/g, 'id="pin-box-').replace(/aria-labelledby="box-/g, 'aria-labelledby="pin-box-')}
+        ${renderAtributos(ctx).replace(/id="box-/g, 'id="pin-box-').replace(/aria-labelledby="box-/g, 'aria-labelledby="pin-box-')}
+      </div>
+      <div class="pin-rels"><p class="pin-rels-title">Vínculos</p>${tabs.map(relation).join('')}</div>
+    </article>`;
+  markDiffs();
+}
+
+/** Light mark on summary fields and relation counts that differ between the two fichas. */
+function markDiffs() {
+  $$('.differs').forEach((el) => el.classList.remove('differs'));
+  if (!pin.ctx || !state.detail || state.detail.ctx.p.codigo === pin.code) return;
+  const text = (el) => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '');
+  const keys = new Set([...$$('#pinned [data-cmp]'), ...$$('#detail [data-cmp]')].map((el) => el.dataset.cmp));
+  for (const key of keys) {
+    const a = $(`#pinned [data-cmp="${CSS.escape(key)}"]`);
+    const b = $(`#detail [data-cmp="${CSS.escape(key)}"]`);
+    if (text(a) !== text(b)) { a?.classList.add('differs'); b?.classList.add('differs'); }
+  }
+  const current = Object.fromEntries(state.detail.tabs.map((t) => [t.id, t.badge?.text ?? '']));
+  const pinned = Object.fromEntries(buildTabs(pin.ctx).map((t) => [t.id, t.badge?.text ?? '']));
+  for (const id of Object.keys(current)) {
+    if (current[id] === pinned[id]) continue;
+    $(`#tab-${id}`)?.classList.add('differs');
+    $(`#pinned [data-cmp-rel="${id}"] summary, #pinned [data-cmp-rel="${id}"] .summary-like`)?.classList.add('differs');
+  }
+}
+
+function setupPin() {
+  const panel = $('#pinned');
+  panel.addEventListener('click', (event) => {
+    const target = event.target.closest('[data-pin-action], [data-proc]');
+    if (!target) return;
+    if (target.dataset.pinAction === 'unpin') unpin();
+    else if (target.dataset.pinAction === 'nohab') toast(target.title);
+    else if (target.dataset.proc) {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      event.preventDefault();
+      openLinkedProcedure(target.dataset.proc);   // opens on the browsing side; the pin stays
+    }
+  });
+  panel.addEventListener('input', (event) => {
+    if (event.target.matches('.table-filter')) applyTableFilter(event.target);
+  });
+  const fixed = new URLSearchParams(location.search).get('fixo');
+  if (fixed && state.nameByCode.has(fixed)) pinProcedure(fixed);
+}
+
 async function init() {
   replaceIconPlaceholders();
+  // Text size and Legível/Original controls are hidden for now: use the defaults, not a saved choice
+  // the page no longer offers to change.
+  if ($('.reading-controls')?.hidden) Object.assign(settings, { size: 'm', textMode: 'legivel' });
   applyReadingSettings();
   setupReadingControls();
   setupInfoButton();
@@ -3018,6 +3233,8 @@ async function init() {
   setupControls();
   setupSourceDialog();
   setupRelationBrowser();
+  setupV2();
+  setupPin();
   restoreFromURL();
 }
 

@@ -21,8 +21,9 @@
       <span class="brand-icon" aria-hidden="true">S<span>+</span></span>
       <span class="brand-text">SIGTAP<small>Explorador</small></span>
     </a>
+    <button type="button" class="side-toggle" id="side-toggle" aria-expanded="true" aria-controls="group-nav" title="Recolher a barra lateral (tecla [ )"><span class="side-toggle-icon" aria-hidden="true">«</span><span class="side-toggle-text">Recolher</span></button>
     <button id="all-groups" class="nav-main active" type="button">
-      <span data-icon="grid"></span><span>Todos os procedimentos</span>
+      <span data-icon="grid"></span><span class="long">Todos os procedimentos</span><span class="short">Todos</span>
     </button>
     <div class="nav-section" data-section="groups">
       <button type="button" class="section-toggle" aria-expanded="true" aria-controls="group-nav" title="Recolher ou expandir os grupos">
@@ -41,6 +42,9 @@
     <button type="button" class="reports-button" id="reports-button" aria-pressed="false">
       <span data-icon="report"></span><span class="section-title">Relatórios</span><span id="report-count" class="section-meta"></span>
     </button>
+    <button class="source-button side-source" id="source-button" type="button" aria-label="Fonte e validação dos dados">
+      <span data-icon="database"></span><span class="long">Fonte e validação</span><span class="short">Fonte</span>
+    </button>
   </aside>
 
   <main class="main">
@@ -50,7 +54,7 @@
         <span class="edition-chip">Competência <strong id="edition">—</strong></span>
       </div>
 
-      <div class="reading-controls" role="group" aria-label="Opções de leitura">
+      <div class="reading-controls" role="group" aria-label="Opções de leitura" hidden>
         <div class="control">
           <span class="control-label" id="size-label">Tamanho do texto</span>
           <div class="segmented" role="group" aria-labelledby="size-label">
@@ -69,9 +73,6 @@
         </div>
       </div>
 
-      <button class="source-button" id="source-button" type="button" aria-label="Fonte e validação dos dados">
-        <span data-icon="database"></span><span>Fonte e validação</span>
-      </button>
     </header>
 
     <section class="explorer" aria-label="Explorador de procedimentos">
@@ -82,12 +83,14 @@
             <input id="search" type="search" placeholder="Busque pelo nome ou código (ex.: enterectomia, 04.07.02.017-9)…" aria-label="Buscar por nome ou código do procedimento" autocomplete="off">
             <kbd title="Atalho: tecla /">/</kbd>
           </div>
+          <button id="filter-toggle" class="filter-toggle" type="button" aria-expanded="false" aria-controls="filter-grid"><span data-icon="grid"></span><span>Filtros</span><span id="filter-count" class="filter-count" hidden></span></button>
           <button id="reset" class="reset-button" type="button" title="Limpar busca e filtros">
             <span data-icon="reset"></span><span>Limpar</span>
           </button>
         </div>
 
-        <div class="filter-grid">
+        <div class="chip-row" id="chip-row" hidden></div>
+        <div class="filter-grid" id="filter-grid" hidden>
           <div class="field">
             <div class="field-head"><label for="group">Grupo</label></div>
             <select id="group"><option value="">Todos os grupos</option></select>
@@ -141,6 +144,10 @@
               <button id="next" type="button" aria-label="Próxima página" disabled><span data-icon="right"></span></button>
             </div>
           </div>
+        </section>
+
+        <section class="pinned-panel" id="pinned-panel" aria-label="Procedimento fixado para comparação" hidden>
+          <div id="pinned"></div>
         </section>
 
         <section class="detail-panel" id="detail-panel" aria-label="Ficha do procedimento">
