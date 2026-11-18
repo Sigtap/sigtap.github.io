@@ -83,14 +83,14 @@
             <input id="search" type="search" placeholder="Busque pelo nome ou código (ex.: enterectomia, 04.07.02.017-9)…" aria-label="Buscar por nome ou código do procedimento" autocomplete="off">
             <kbd title="Atalho: tecla /">/</kbd>
           </div>
-          <button id="filter-toggle" class="filter-toggle" type="button" aria-expanded="false" aria-controls="filter-grid"><span data-icon="grid"></span><span>Filtros</span><span id="filter-count" class="filter-count" hidden></span></button>
+          <button id="filter-toggle" class="filter-toggle" type="button" aria-expanded="true" aria-controls="filter-grid"><span data-icon="grid"></span><span>Filtros</span><span id="filter-count" class="filter-count" hidden></span></button>
           <button id="reset" class="reset-button" type="button" title="Limpar busca e filtros">
             <span data-icon="reset"></span><span>Limpar</span>
           </button>
         </div>
 
         <div class="chip-row" id="chip-row" hidden></div>
-        <div class="filter-grid" id="filter-grid" hidden>
+        <div class="filter-grid" id="filter-grid">
           <div class="field">
             <div class="field-head"><label for="group">Grupo</label></div>
             <select id="group"><option value="">Todos os grupos</option></select>

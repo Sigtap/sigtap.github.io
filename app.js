@@ -763,7 +763,7 @@ function renderFichaHeader({ p }) {
       <div class="ficha-code-row">
         <span class="ficha-code" aria-label="Código ${maskProcedure(p.codigo)}">${maskProcedure(p.codigo)}</span>
         <button type="button" class="copy-button" data-action="copy" data-code="${p.codigo}" title="Copiar código (somente números)">${icon('copy')}<span>Copiar código</span></button>
-        <button type="button" class="copy-button pin-button${pin.code === p.codigo ? ' on' : ''}" data-action="pin" title="${pin.code === p.codigo ? 'Este procedimento está fixado' : 'Fixar este procedimento ao lado, para comparar com os próximos'}">${icon('pin')}<span>${pin.code === p.codigo ? 'Fixado' : 'Fixar'}</span></button>
+        <button type="button" class="copy-button pin-button${pin.code === p.codigo ? ' on' : ''}" data-action="pin" title="${pin.code === p.codigo ? 'Este procedimento está fixado' : 'Fixar este procedimento ao lado, para comparar com os próximos'}" aria-label="${pin.code === p.codigo ? 'Fixado para comparação' : 'Fixar para comparar'}" aria-pressed="${pin.code === p.codigo}">${icon('pin')}</button>
         ${expandButton()}
         <p class="ficha-meta">Competência ${competenciaLabel()}</p>
       </div>
