@@ -2623,8 +2623,8 @@ body.side-collapsed .section-chevron svg { transform: rotate(-90deg); }
 }
 .tabbar { top: var(--fhead-h, 0px); }
 .detail-panel { scroll-padding-top: calc(var(--fhead-h, 0px) + var(--tabbar-h, 5rem) + 8px); }
-.expand-button { padding: 4px 7px; }
-.expand-button svg { width: 16px; height: 16px; }
+.expand-button, .pin-button { padding: 4px 7px; }
+.expand-button svg, .pin-button svg { width: 16px; height: 16px; }
 
 .empty-detail.welcome h2 { color: var(--brand-dark); }
 
@@ -2654,7 +2654,7 @@ body.has-pin.ficha-full .workspace { grid-template-columns: minmax(0, 1fr) minma
   background: var(--sand-bg); border: 1px solid var(--sand-line);
   font-size: var(--fs-xs); font-weight: 700; color: var(--sand-ink);
 }
-.pin-label svg, .pin-button svg, .pin-mark svg { width: 14px; height: 14px; }
+.pin-label svg, .pin-mark svg { width: 14px; height: 14px; }
 .pinned-ficha .ficha-code { font-size: 1.15rem; }
 .pinned-ficha .ficha-name { font-size: 1.05rem; }
 .pin-button.on { background: var(--sand-bg); border-color: var(--sand-line); color: var(--sand-ink); }
