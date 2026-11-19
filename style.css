@@ -2687,3 +2687,8 @@ body.side-collapsed .side-source .short { display: inline; }
 /* field and money rows lay their dt/dd out on the parent grid: mark the cells */
 .field-row.differs > *, .money-row.differs > * { background-color: #fff6e3; }
 .field-row.differs > dt, .money-row.differs > dt { box-shadow: inset 3px 0 0 #e0a43a; padding-left: 6px; }
+
+/* Novidades: the competência selector shows the nota too; keep it inside a narrow screen */
+.news-select-label { flex-wrap: wrap; max-width: 100%; min-width: 0; }
+.news-select-label select { flex: 1 1 12rem; width: 100%; min-width: 0; text-overflow: ellipsis; }
+.report-head-actions { max-width: 100%; }

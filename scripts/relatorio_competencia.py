@@ -156,7 +156,7 @@ def main():
             ['Novos procedimentos', fmt_int(len(nota['novos'])), fmt_int(r['novos']), 'confere' if not conf['Procedimentos novos']['so_na_base'] + conf['Procedimentos novos']['so_na_nota'] else 'ver conferência'],
             ['Procedimentos revogados', fmt_int(len(nota['revogados'])), fmt_int(r['revogados']), 'confere' if not conf['Procedimentos revogados']['so_na_base'] + conf['Procedimentos revogados']['so_na_nota'] else 'ver conferência'],
             ['Alterações em procedimentos', fmt_int(len(nota['alterados'])), fmt_int(r['alterados']),
-             f'{fmt_int(len(alt_only_base))} alterações da base sem item na nota (seção 6)' if alt_only_base else 'confere'],
+             f'{fmt_int(len(alt_only_base))} {"alteração" if len(alt_only_base) == 1 else "alterações"} da base sem item na nota (seção 6)' if alt_only_base else 'confere'],
             ['Novas compatibilidades', fmt_int(len(nota['compat_novas'])), fmt_int(r['compat_incluidas']), 'confere' if not conf['Compatibilidades incluídas']['so_na_base'] + conf['Compatibilidades incluídas']['so_na_nota'] else 'ver conferência'],
             ['Compatibilidades revogadas', fmt_int(len(nota['compat_revogadas'])), fmt_int(r['compat_removidas']),
              f"{sum(1 for c in nov['compatibilidades'] if c.get('decorrente_de'))} removidas junto com procedimento revogado"

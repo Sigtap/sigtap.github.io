@@ -1505,8 +1505,9 @@ function tussSections({ tabsData }) {
 
 function compatBadge(tipo, lk) {
   const label = lk.tipo_compatibilidade[String(tipo)];
+  // "Concomitantes - APACs diferentes para o mesmo paciente": the badge shows the name, the tooltip the rest.
   return label
-    ? `<span class="badge ${String(tipo) === '2' ? 'badge-excl' : 'badge-ok'}">${esc(label)}</span>`
+    ? `<span class="badge ${String(tipo) === '2' ? 'badge-excl' : 'badge-ok'}" title="${esc(label)}">${esc(label.split(' - ')[0])}</span>`
     : `<span class="badge" title="Rótulo do tipo ${tipo} não confirmado na base">Tipo ${tipo}</span>`;
 }
 
@@ -1522,7 +1523,7 @@ function compatQuantity(qt) {
 function compatTable(items, { lk, p }, asPrincipal) {
   const self = maskProcedure(p.codigo);
   const caption = `Pares cadastrados com ${self} como ${asPrincipal ? 'principal' : 'compatível'} (rl_procedimento_compativel).
-    Tipo 1 = Compatível (tela do SIGTAP); tipos 2, 4 e 5 = Excludente, Compatível Seq e Obrigatória (Nota Técnica CGSI nº 10/2026). O tipo 3 ainda não tem rótulo confirmado.`;
+    Tipo 1 = Compatível (tela do SIGTAP); tipos 2 a 5 = Excludente, Concomitantes (APACs diferentes para o mesmo paciente), Compatível Seq e Obrigatória (Notas Técnicas CGSI de 10/2026 e 11/2026).`;
   return dataTable({
     caption,
     tableClass: 'compat-table stack-table',

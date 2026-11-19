@@ -49,8 +49,21 @@ def unmask(code):
     return re.sub(r'\D', '', code)
 
 
+def join_wrapped_registro(rows):
+    """A registro header can wrap: "... x ... (Concomitantes - APACs diferentes para o mesmo" + "paciente)"."""
+    out, i = [], 0
+    while i < len(rows):
+        indent, line = rows[i]
+        if ') x ' in line and line.count('(') > line.count(')') and i + 1 < len(rows) and rows[i + 1][1]:
+            line = f'{line} {rows[i + 1][1]}'
+            i += 1
+        out.append((indent, line))
+        i += 1
+    return out
+
+
 def parse(text):
-    lines = [l.strip() for l in text.splitlines()]
+    rows = join_wrapped_registro([(len(l) - len(l.lstrip()), l.strip()) for l in text.splitlines()])
     title = TITLE.search(text)
     if not title:
         sys.exit('Cabeçalho "NOTA TÉCNICA nº ... de ... - ..." não encontrado.')
@@ -59,11 +72,15 @@ def parse(text):
     section = portaria = registro = None
     current = None
     principal = None        # compat sections: principal procedure
-    for line in lines:
+    prev_indent = None      # indent of the previous text line (None after a blank line or page header)
+    prev_header = False     # the previous line opened an item
+    for indent, line in rows:
         if not line or NOISE.match(line) or '....' in line:
+            prev_indent = None
             continue
         if line in SECTIONS:
             section, portaria, registro, current, principal = SECTIONS[line], None, None, None, None
+            prev_indent, prev_header = None, False
             continue
         if section is None:
             continue
@@ -71,6 +88,7 @@ def parse(text):
         if m:
             portaria = {'numero': m.group(1), 'data': m.group(2), 'orgao': m.group(3)}
             current = principal = None
+            prev_indent, prev_header = None, False
             continue
         if section.startswith('compat'):
             m = REGISTRO.match(line)
@@ -92,9 +110,13 @@ def parse(text):
                 note[section][-1]['qtd'] = int(m.group(1))
             continue
         m = PROC.match(line)
-        if m:
+        # "99.99.99.999-9 - NAME" with the indent of the description text just above is a citation
+        # inside that description, not a new item. A line right after another item's header is an item.
+        citation = bool(m) and not prev_header and prev_indent == indent
+        if m and not citation:
             current = {'codigo': unmask(m.group(1)), 'portaria': portaria}
             note[section].append(current)
+        prev_indent, prev_header = indent, bool(m) and not citation
     return note
 
 

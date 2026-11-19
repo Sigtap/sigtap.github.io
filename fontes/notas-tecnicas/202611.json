@@ -1,0 +1,5643 @@
+{
+ "numero": "11/2026",
+ "data": "25/10/2026",
+ "orgao": "CGSI",
+ "novos": [
+  {
+   "codigo": "0605010137",
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020591",
+   "portaria": {
+    "numero": "12304",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010153",
+   "portaria": {
+    "numero": "12304",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010161",
+   "portaria": {
+    "numero": "12304",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0303080124",
+   "portaria": {
+    "numero": "12305",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090077",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090085",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090093",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090107",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090115",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090123",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020567",
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020575",
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020559",
+   "portaria": {
+    "numero": "12312",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010145",
+   "portaria": {
+    "numero": "12312",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010099",
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020583",
+   "portaria": {
+    "numero": "12307",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010056",
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010064",
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010072",
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020524",
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020532",
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020540",
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020516",
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304080098",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0213010844",
+   "portaria": {
+    "numero": "4457",
+    "data": "22/07/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020508",
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010048",
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010030",
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0605010080",
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0214010325",
+   "portaria": {
+    "numero": "5215",
+    "data": "22/10/2026",
+    "orgao": "SAES"
+   }
+  }
+ ],
+ "revogados": [
+  {
+   "codigo": "0304050326",
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020494",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  }
+ ],
+ "alterados": [
+  {
+   "codigo": "0204030080",
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304010367",
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020150",
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020206",
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304040061",
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304040088",
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304080012",
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304030058",
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304030236",
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304030244",
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304060224",
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020168",
+   "portaria": {
+    "numero": "12304",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304060011",
+   "portaria": {
+    "numero": "12313",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304060038",
+   "portaria": {
+    "numero": "12313",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304060046",
+   "portaria": {
+    "numero": "12313",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090018",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090026",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090034",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090042",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090050",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304090069",
+   "portaria": {
+    "numero": "12314",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020060",
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020079",
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020087",
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0416010130",
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0206010095",
+   "portaria": {
+    "numero": "12309",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020427",
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020443",
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304050296",
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304050300",
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304050318",
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304030082",
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304030147",
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304030228",
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304020214",
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020222",
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304040096",
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020230",
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020133",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020141",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020338",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020346",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020419",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020435",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020451",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020460",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020478",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020486",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304040029",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304040185",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304040193",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050040",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050067",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050075",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050113",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050121",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050130",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050261",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050270",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304050288",
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304030074",
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304030104",
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304030120",
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304030139",
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304030155",
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0304020311",
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304030090",
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304030112",
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0304050334",
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "codigo": "0201010232",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0201010348",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0201010526",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0301010048",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0307020045",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0307020053",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0307020061",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0307040186",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0307040194",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0405040210",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0701070188",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0701070196",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0701070200",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0701070218",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0701070226",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0701070234",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0701070250",
+   "portaria": {
+    "numero": "5109",
+    "data": "07/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "codigo": "0202040143",
+   "portaria": {
+    "numero": "5215",
+    "data": "22/10/2026",
+    "orgao": "SAES"
+   }
+  }
+ ],
+ "compat_novas": [
+  {
+   "principal": "0304020150",
+   "compativel": "0304080012",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020206",
+   "compativel": "0304080012",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304040061",
+   "compativel": "0304080012",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304040088",
+   "compativel": "0304080012",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12303",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030058",
+   "compativel": "0605010137",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1100,
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030236",
+   "compativel": "0605010137",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1100,
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030244",
+   "compativel": "0605010137",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1100,
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304060224",
+   "compativel": "0605010137",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1100,
+   "portaria": {
+    "numero": "12306",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020591",
+   "compativel": "0304020168",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12304",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020591",
+   "compativel": "0605010153",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 124,
+   "portaria": {
+    "numero": "12304",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020591",
+   "compativel": "0605010161",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 62,
+   "portaria": {
+    "numero": "12304",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020567",
+   "compativel": "0304020060",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020567",
+   "compativel": "0304020575",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020575",
+   "compativel": "0304020060",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020575",
+   "compativel": "0304020087",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020087",
+   "compativel": "0304020079",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020567",
+   "compativel": "0304020079",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020567",
+   "compativel": "0304020087",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020575",
+   "compativel": "0304020079",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12311",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020559",
+   "compativel": "0605010145",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2,
+   "portaria": {
+    "numero": "12312",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020427",
+   "compativel": "0605010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2100,
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020443",
+   "compativel": "0605010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2100,
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020443",
+   "compativel": "0605010099",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1260,
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304050296",
+   "compativel": "0605010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2100,
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304050300",
+   "compativel": "0605010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2100,
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304050318",
+   "compativel": "0605010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2100,
+   "portaria": {
+    "numero": "12310",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020583",
+   "compativel": "0304020311",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12307",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030082",
+   "compativel": "0605010056",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 62,
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030082",
+   "compativel": "0605010064",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 31,
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030147",
+   "compativel": "0605010056",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 62,
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030147",
+   "compativel": "0605010064",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 31,
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030147",
+   "compativel": "0605010072",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 124,
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030228",
+   "compativel": "0605010056",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 62,
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030228",
+   "compativel": "0605010064",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 31,
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030228",
+   "compativel": "0605010072",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 124,
+   "portaria": {
+    "numero": "12308",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304020036",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304020060",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304020079",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030015",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030031",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030058",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030074",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030112",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030163",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030180",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030228",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030236",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304030252",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304040193",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304040207",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304050040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304050113",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304050121",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304050342",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304020036",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304020060",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304020079",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030015",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030031",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030058",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030074",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030112",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030120",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030163",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030180",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030228",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030236",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304030252",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304040193",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304040207",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304050040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304050113",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304050121",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304050342",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304020036",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304020060",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304020079",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030015",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030031",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030058",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030074",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030112",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030120",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030163",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030180",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030228",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030236",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304030252",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304040193",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304040207",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304050040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304050113",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304050121",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304050342",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304080055",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020524",
+   "compativel": "0304080071",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304080055",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020532",
+   "compativel": "0304080071",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304080055",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020540",
+   "compativel": "0304080071",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5182",
+    "data": "15/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020516",
+   "compativel": "0304020230",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020036",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020060",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020079",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020338",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020346",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030015",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030031",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030058",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030163",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030236",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304040193",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304040207",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304050040",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304050113",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304050121",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304050342",
+   "compativel": "0304020516",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5158",
+    "data": "14/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020133",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020141",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020419",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020427",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020435",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020443",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020451",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020460",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020478",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304020486",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304040029",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304040185",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304040193",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050067",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050075",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050113",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050121",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050130",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050261",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050270",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050288",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050296",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050300",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070017",
+   "compativel": "0304050318",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020133",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020141",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020419",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020427",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020435",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020443",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020451",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020460",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020478",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304020486",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304040029",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304040185",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304040193",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050067",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050075",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050113",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050121",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050130",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050261",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050270",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050288",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050296",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050300",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070025",
+   "compativel": "0304050318",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020133",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020141",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020419",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020427",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020435",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020443",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020451",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020460",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020478",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304020486",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304040029",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304040185",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304040193",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050067",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050075",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050113",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050121",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050130",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050261",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050270",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050288",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050296",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050300",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070033",
+   "compativel": "0304050318",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020133",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020141",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020419",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020427",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020435",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020443",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020451",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020460",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020478",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304020486",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304040029",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304040185",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304040193",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050067",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050075",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050113",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050121",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050130",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050261",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050270",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050288",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050296",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050300",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304070041",
+   "compativel": "0304050318",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020427",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020451",
+   "compativel": "0304020478",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020460",
+   "compativel": "0304020486",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020338",
+   "compativel": "0304080098",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020346",
+   "compativel": "0304080098",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020478",
+   "compativel": "0304080098",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020486",
+   "compativel": "0304080071",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020486",
+   "compativel": "0304080098",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304040193",
+   "compativel": "0304080098",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304050040",
+   "compativel": "0304080098",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304050113",
+   "compativel": "0304080098",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304050121",
+   "compativel": "0304080098",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030074",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030074",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030074",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030074",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030082",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030082",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030082",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030082",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030090",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030090",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030090",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030090",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030104",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030104",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030104",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030104",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030112",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030112",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030112",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030112",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030120",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030120",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030120",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030120",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030139",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030139",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030139",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030139",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030147",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030147",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030147",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030147",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030155",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030155",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030155",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030155",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030228",
+   "compativel": "0304070017",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030228",
+   "compativel": "0304070025",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030228",
+   "compativel": "0304070033",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304030228",
+   "compativel": "0304070041",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5156",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0908010010",
+   "compativel": "0202080110",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5048",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0908010036",
+   "compativel": "0202080250",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5048",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0908010044",
+   "compativel": "0301010307",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5048",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0908010010",
+   "compativel": "0204030153",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Obrigatória"
+   },
+   "qtd": 1,
+   "portaria": {
+    "numero": "5048",
+    "data": "01/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304020044",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304020176",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304020478",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304020486",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304040193",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304050040",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304050113",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304050121",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0304080071",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2100,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020508",
+   "compativel": "0605010048",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 2100,
+   "portaria": {
+    "numero": "12318",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020311",
+   "compativel": "0605010030",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 248,
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304020311",
+   "compativel": "0605010080",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 62,
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030090",
+   "compativel": "0605010030",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 248,
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030090",
+   "compativel": "0605010080",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 62,
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030112",
+   "compativel": "0605010030",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 248,
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304030112",
+   "compativel": "0605010080",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 62,
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304050334",
+   "compativel": "0605010030",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 248,
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  },
+  {
+   "principal": "0304050334",
+   "compativel": "0605010080",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Secundário)",
+    "tipo": "Compatível"
+   },
+   "qtd": 62,
+   "portaria": {
+    "numero": "12315",
+    "data": "28/10/2026",
+    "orgao": "GM"
+   }
+  }
+ ],
+ "compat_revogadas": [
+  {
+   "principal": "0304020494",
+   "compativel": "0304020338",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020494",
+   "compativel": "0304020346",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Excludente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020338",
+   "compativel": "0304020451",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  },
+  {
+   "principal": "0304020346",
+   "compativel": "0304020460",
+   "registro": {
+    "principal": "APAC (Proc. Principal)",
+    "compativel": "APAC (Proc. Principal)",
+    "tipo": "Concomitantes - APACs diferentes para o mesmo paciente"
+   },
+   "qtd": 0,
+   "portaria": {
+    "numero": "5157",
+    "data": "13/10/2026",
+    "orgao": "SAES"
+   }
+  }
+ ],
+ "competencia": "202611",
+ "arquivo": "nota_tecnica_cgsi_sigtap_2026_11.pdf",
+ "sha256": "a08a445c8969cbd29f97d9e04be73ad216a252b59a988a095155e47ee89fb7a0"
+}
