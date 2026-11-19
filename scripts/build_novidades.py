@@ -80,7 +80,8 @@ def compat_pairs(procs):
     for code, proc in procs.items():
         for item in proc.get('sigtap', {}).get('tabs', {}).get('compat', []):
             other, reg_p, reg_c, tipo, qt = item
-            pairs[(code, other, reg_p, reg_c)] = [code, other, reg_p, reg_c, tipo, qt]
+            # The tipo is part of the key: the same two procedures can be linked as tipo 2 and tipo 3.
+            pairs[(code, other, reg_p, reg_c, tipo)] = [code, other, reg_p, reg_c, tipo, qt]
     return pairs
 
 
